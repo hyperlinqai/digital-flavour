@@ -42,7 +42,7 @@ const Header = () => {
               <span className="text-primary-foreground font-bold text-xl">D</span>
             </div>
             <span className="font-bold text-xl text-foreground">
-              Digi<span className="text-primary">Mark</span>
+              Digital <span className="text-primary">Flavour</span>
             </span>
           </a>
 
