@@ -55,7 +55,7 @@ const Footer = () => {
                 <span className="text-primary-foreground font-bold text-xl">D</span>
               </div>
               <span className="font-bold text-xl">
-                Digi<span className="text-primary">Mark</span>
+                Digital <span className="text-primary">Flavour</span>
               </span>
             </div>
             <p className="text-background/70 mb-6 max-w-sm">
@@ -132,7 +132,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-background/60 text-sm">
-            © {new Date().getFullYear()} DigiMark Agency. All rights reserved.
+            © {new Date().getFullYear()} Digital Flavour. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-background/60">
             <a href="#" className="hover:text-primary transition-colors">
