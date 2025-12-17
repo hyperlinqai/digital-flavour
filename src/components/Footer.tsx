@@ -51,12 +51,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">D</span>
-              </div>
-              <span className="font-bold text-xl">
-                Digital <span className="text-primary">Flavour</span>
-              </span>
+              <img
+                src="/df-logo.png"
+                alt="Digital Flavour logo"
+                className="w-18 h-16 object-contain"
+              />
             </div>
             <p className="text-background/70 mb-6 max-w-sm">
               Transforming businesses through innovative digital marketing 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Phone, ArrowRight } from "lucide-react";
+import { Menu, X, Phone, ArrowRight, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
@@ -14,6 +14,7 @@ const navItems = [
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,22 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialTheme = storedTheme ?? (prefersDark ? "dark" : "light");
+
+    setTheme(initialTheme);
+    document.documentElement.classList.toggle("dark", initialTheme === "dark");
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
   return (
     <motion.header
@@ -38,12 +55,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">D</span>
-            </div>
-            <span className="font-bold text-xl text-foreground">
-              Digital <span className="text-primary">Flavour</span>
-            </span>
+            <img
+              src="/df-logo.png"
+              alt="Digital Flavour logo"
+              className="w-18 h-16 object-contain"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -59,28 +75,41 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-4">
-            <a
-              href="tel:+916363559677"
-              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+          <div className="flex items-center gap-3">
+            {/* Theme Toggle - always visible at top */}
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={toggleTheme}
+              aria-label="Toggle color theme"
+              className="w-10 h-10"
             >
-              <Phone className="w-4 h-4" />
-              <span className="font-medium">+91 6363559677</span>
-            </a>
-            <Button variant="hero" size="lg">
-              Get Started
-              <ArrowRight className="w-4 h-4" />
+              {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </Button>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {/* CTA Buttons */}
+            <div className="hidden md:flex items-center gap-4">
+              <a
+                href="tel:+916363559677"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="font-medium">+91 6363559677</span>
+              </a>
+              <Button variant="hero" size="lg">
+                Get Started
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -102,8 +131,8 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <div className="px-4 pt-4 border-t border-border mt-2">
-                <Button variant="hero" className="w-full">
+              <div className="flex items-center gap-3 px-4 pt-4 border-t border-border mt-2">
+                <Button variant="hero" className="flex-1">
                   Get Started
                   <ArrowRight className="w-4 h-4" />
                 </Button>
