@@ -3,9 +3,9 @@ import {
   Search, 
   LineChart, 
   Megaphone, 
-  Palette, 
+  ShoppingCart, 
   Globe, 
-  BarChart3,
+  Share2,
   ArrowRight 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,39 +13,45 @@ import { Button } from "@/components/ui/button";
 const services = [
   {
     icon: Search,
-    title: "SEO Optimization",
-    description: "Dominate search rankings with data-driven SEO strategies that drive organic traffic and visibility.",
+    title: "Local SEO Optimization",
+    description: "Dominate search rankings with data driven SEO strategies that drive organic traffic and visibility.",
     features: ["Technical SEO", "Content Strategy", "Link Building"],
+    href: "/services/local-seo",
   },
   {
     icon: Megaphone,
     title: "Google Ads",
     description: "Maximize ROI with targeted PPC campaigns that convert clicks into customers.",
     features: ["Search Ads", "Display Ads", "Remarketing"],
+    href: "/services/google-ads",
   },
   {
     icon: LineChart,
-    title: "CRO Services",
-    description: "Turn visitors into buyers with conversion optimization strategies backed by analytics.",
-    features: ["A/B Testing", "UX Analysis", "Funnel Optimization"],
+    title: "Lead Generation",
+    description: "Attract and convert high quality leads with targeted campaigns that grow your pipeline.",
+    features: ["Landing Pages", "Lead Magnets", "Email Campaigns"],
+    href: "/services/lead-generation",
   },
   {
-    icon: Palette,
-    title: "Branding",
-    description: "Build a memorable brand identity that resonates with your target audience.",
-    features: ["Brand Strategy", "Visual Identity", "Brand Guidelines"],
+    icon: ShoppingCart,
+    title: "E Commerce Marketing",
+    description: "Drive sales and grow your online store with targeted ecommerce marketing strategies.",
+    features: ["Product Listings", "Shopping Ads", "Sales Funnels"],
+    href: "/services/ecommerce-marketing",
   },
   {
     icon: Globe,
     title: "Web Design",
     description: "Create stunning, responsive websites that captivate and convert visitors.",
     features: ["UI/UX Design", "Responsive Dev", "Performance"],
+    href: "/services/web-design",
   },
   {
-    icon: BarChart3,
-    title: "Analytics",
-    description: "Make informed decisions with comprehensive data analytics and insights.",
-    features: ["GA4 Setup", "Custom Reports", "Data Visualization"],
+    icon: Share2,
+    title: "Social Media Marketing",
+    description: "Build your brand presence and engage audiences across all social platforms.",
+    features: ["Content Strategy", "Community Management", "Paid Social"],
+    href: "/services/social-media-marketing",
   },
 ];
 
@@ -69,7 +75,7 @@ const Services = () => {
             <span className="text-gradient">Marketing Solutions</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            From SEO to paid advertising, we offer end-to-end digital marketing 
+            From SEO to paid advertising, we offer end to end digital marketing 
             services to help your business thrive online.
           </p>
         </motion.div>
@@ -102,7 +108,7 @@ const Services = () => {
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
                     {feature}
                   </li>
                 ))}
@@ -110,7 +116,7 @@ const Services = () => {
 
               {/* Link */}
               <a
-                href="#contact"
+                href={service.href}
                 className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
               >
                 Learn More

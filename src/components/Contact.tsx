@@ -10,20 +10,20 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    value: "+91 6363559677",
-    href: "tel:+916363559677",
+    value: "+91 9111268785",
+    href: "tel:+919111268785",
   },
   {
     icon: Mail,
     title: "Email",
-    value: "hello@digimarkagency.com",
-    href: "mailto:hello@digimarkagency.com",
+    value: "marketing@digitalflavour.co",
+    href: "mailto:marketing@digitalflavour.co",
   },
   {
     icon: MapPin,
     title: "Location",
-    value: "Bangalore, India",
-    href: "#",
+    value: "Indore, Madhya Pradesh",
+    href: "https://maps.google.com/?q=16, Juna Pitha Main Rd, G - 2, Keshavkunj, Ahilya Pura, Indore, Madhya Pradesh 452007",
   },
 ];
 

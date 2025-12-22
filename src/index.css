@@ -15,32 +15,39 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 38 100% 54%;
-    --primary-foreground: 0 0% 10%;
+    /* Digital Flavour Orange - matches logo */
+    --primary: 28 94% 54%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
+    /* Digital Flavour Green - matches logo leaves */
+    --secondary: 134 52% 47%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 38 100% 95%;
-    --accent-foreground: 38 100% 35%;
+    /* Orange tinted accent */
+    --accent: 28 100% 95%;
+    --accent-foreground: 28 94% 40%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 38 100% 54%;
+    --ring: 28 94% 54%;
 
     --radius: 0.5rem;
 
     /* Custom Digital Flavour tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(38 100% 54% / 0.05) 0%, hsl(0 0% 98%) 100%);
+    --df-orange: 28 94% 54%;
+    --df-green: 134 52% 47%;
+    --df-dark: 0 0% 20%;
+    
+    --hero-gradient: linear-gradient(135deg, hsl(28 94% 54% / 0.08) 0%, hsl(134 52% 47% / 0.03) 50%, hsl(0 0% 98%) 100%);
     --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.08);
-    --card-shadow-hover: 0 8px 30px -4px hsl(38 100% 54% / 0.2);
-    --text-gradient: linear-gradient(135deg, hsl(38 100% 54%) 0%, hsl(38 100% 40%) 100%);
+    --card-shadow-hover: 0 8px 30px -4px hsl(28 94% 54% / 0.25);
+    --text-gradient: linear-gradient(135deg, hsl(28 94% 54%) 0%, hsl(28 94% 42%) 100%);
     
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -49,7 +56,7 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 28 94% 54%;
   }
 
   .dark {
@@ -62,37 +69,45 @@
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 38 100% 54%;
-    --primary-foreground: 0 0% 10%;
+    /* Digital Flavour Orange - matches logo */
+    --primary: 28 94% 54%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 18%;
-    --secondary-foreground: 0 0% 98%;
+    /* Digital Flavour Green - matches logo leaves */
+    --secondary: 134 52% 47%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 18%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 38 60% 20%;
-    --accent-foreground: 38 100% 80%;
+    /* Orange tinted accent for dark mode */
+    --accent: 28 60% 18%;
+    --accent-foreground: 28 94% 75%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 38 100% 54%;
+    --ring: 28 94% 54%;
 
-    --hero-gradient: linear-gradient(135deg, hsl(38 100% 54% / 0.1) 0%, hsl(0 0% 10%) 100%);
+    /* Custom Digital Flavour tokens - dark mode */
+    --df-orange: 28 94% 54%;
+    --df-green: 134 52% 47%;
+    --df-dark: 0 0% 90%;
+    
+    --hero-gradient: linear-gradient(135deg, hsl(28 94% 54% / 0.12) 0%, hsl(134 52% 47% / 0.05) 50%, hsl(0 0% 10%) 100%);
     --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
-    --card-shadow-hover: 0 8px 30px -4px hsl(38 100% 54% / 0.3);
+    --card-shadow-hover: 0 8px 30px -4px hsl(28 94% 54% / 0.35);
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 28 94% 54%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 28 94% 54%;
   }
 }
 

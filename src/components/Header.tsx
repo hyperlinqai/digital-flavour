@@ -1,19 +1,30 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Phone, ArrowRight, Sun, Moon } from "lucide-react";
+import { Menu, X, Phone, ArrowRight, Sun, Moon, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const serviceItems = [
+  { name: "Local SEO", href: "/services/local-seo" },
+  { name: "Google Ads", href: "/services/google-ads" },
+  { name: "Lead Generation", href: "/services/lead-generation" },
+  { name: "E Commerce Marketing", href: "/services/ecommerce-marketing" },
+  { name: "Web Design", href: "/services/web-design" },
+  { name: "Social Media Marketing", href: "/services/social-media-marketing" },
+];
+
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
-  { name: "About", href: "#about" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/#services", hasDropdown: true },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
@@ -54,7 +65,7 @@ const Header = () => {
       <div className="container mx-auto container-padding">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <img
               src="/df-logo.png"
               alt="Digital Flavour logo"
@@ -65,13 +76,52 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
-              >
-                {item.name}
-              </a>
+              item.hasDropdown ? (
+                <div 
+                  key={item.name}
+                  className="relative group"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <a
+                    href={item.href}
+                    className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
+                  >
+                    {item.name}
+                    <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                  </a>
+                  
+                  {/* Dropdown Menu */}
+                  {isServicesOpen && (
+                    <div className="absolute top-full left-0 pt-2">
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="w-64 bg-card rounded-xl shadow-xl border border-border overflow-hidden"
+                      >
+                        {serviceItems.map((service) => (
+                          <a
+                            key={service.name}
+                            href={service.href}
+                            className="block px-4 py-3 text-muted-foreground hover:text-primary hover:bg-accent transition-colors"
+                          >
+                            {service.name}
+                          </a>
+                        ))}
+                      </motion.div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </a>
+              )
             ))}
           </nav>
 
@@ -90,15 +140,17 @@ const Header = () => {
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center gap-4">
               <a
-                href="tel:+916363559677"
+                href="tel:+919111268785"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span className="font-medium">+91 6363559677</span>
+                <span className="font-medium">+91 9111268785</span>
               </a>
-              <Button variant="hero" size="lg">
-                Get Started
-                <ArrowRight className="w-4 h-4" />
+              <Button variant="hero" size="lg" asChild>
+                <a href="/contact">
+                  Get Started
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </Button>
             </div>
 
@@ -122,19 +174,47 @@ const Header = () => {
           >
             <nav className="flex flex-col py-4">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="px-4 py-3 text-muted-foreground hover:text-primary hover:bg-accent transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.hasDropdown ? (
+                  <div key={item.name}>
+                    <button
+                      className="w-full flex items-center justify-between px-4 py-3 text-muted-foreground hover:text-primary hover:bg-accent transition-colors"
+                      onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                    >
+                      {item.name}
+                      <ChevronDown className={`w-4 h-4 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    {isMobileServicesOpen && (
+                      <div className="bg-accent/50">
+                        {serviceItems.map((service) => (
+                          <a
+                            key={service.name}
+                            href={service.href}
+                            className="block px-8 py-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {service.name}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="px-4 py-3 text-muted-foreground hover:text-primary hover:bg-accent transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               <div className="flex items-center gap-3 px-4 pt-4 border-t border-border mt-2">
-                <Button variant="hero" className="flex-1">
-                  Get Started
-                  <ArrowRight className="w-4 h-4" />
+                <Button variant="hero" className="flex-1" asChild>
+                  <a href="/contact">
+                    Get Started
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
                 </Button>
               </div>
             </nav>

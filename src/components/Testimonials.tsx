@@ -4,22 +4,22 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Priya Sharma",
-    role: "CEO, TechStart India",
-    content: "DigiMark transformed our online presence completely. Our organic traffic increased by 280% in just 6 months. Their team is incredibly professional and responsive.",
+    role: "CEO, TechStart Indore",
+    content: "Digital Flavour transformed our online presence completely. Our organic traffic increased by 280% in just 6 months. Their team is incredibly professional and responsive.",
     rating: 5,
     image: "PS",
   },
   {
     name: "Rahul Mehta",
     role: "Marketing Director, GrowthCo",
-    content: "The ROI we've seen from our Google Ads campaigns has been phenomenal. DigiMark's data-driven approach really sets them apart from other agencies.",
+    content: "The ROI we have seen from our Google Ads campaigns has been phenomenal. Digital Flavour's data driven approach really sets them apart from other agencies in Indore.",
     rating: 5,
     image: "RM",
   },
   {
     name: "Ananya Patel",
-    role: "Founder, EduLearn",
-    content: "We've tried multiple agencies before, but DigiMark is the only one that truly delivered on their promises. Our lead generation has tripled!",
+    role: "Founder, EduLearn MP",
+    content: "We have tried multiple agencies before, but Digital Flavour is the only one that truly delivered on their promises. Our lead generation has tripled!",
     rating: 5,
     image: "AP",
   },
@@ -45,8 +45,8 @@ const Testimonials = () => {
             <span className="text-gradient">Clients Say</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Don't just take our word for it. Here's what our clients have to say 
-            about their experience working with DigiMark.
+            Do not just take our word for it. Here is what our clients from Indore and 
+            across India have to say about their experience working with Digital Flavour.
           </p>
         </motion.div>
 

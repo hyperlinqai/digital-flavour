@@ -1,42 +1,44 @@
 import { motion } from "framer-motion";
 import { 
   Linkedin, 
-  Twitter, 
+  Youtube, 
   Facebook, 
   Instagram,
-  ArrowUp
+  ArrowUp,
+  Mail,
+  Phone,
+  MapPin
 } from "lucide-react";
 
 const footerLinks = {
   services: [
-    { name: "SEO Optimization", href: "#services" },
-    { name: "Google Ads", href: "#services" },
-    { name: "Social Media", href: "#services" },
-    { name: "Web Design", href: "#services" },
-    { name: "Analytics", href: "#services" },
+    { name: "Local SEO", href: "/services/local-seo" },
+    { name: "Google Ads", href: "/services/google-ads" },
+    { name: "Lead Generation", href: "/services/lead-generation" },
+    { name: "E Commerce Marketing", href: "/services/ecommerce-marketing" },
+    { name: "Web Design", href: "/services/web-design" },
+    { name: "Social Media Marketing", href: "/services/social-media-marketing" },
   ],
   company: [
-    { name: "About Us", href: "#about" },
-    { name: "Our Team", href: "#about" },
-    { name: "Careers", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Contact", href: "#contact" },
-  ],
-  resources: [
-    { name: "Case Studies", href: "#" },
-    { name: "Free Tools", href: "#" },
-    { name: "Guides", href: "#" },
-    { name: "Webinars", href: "#" },
-    { name: "FAQ", href: "#" },
+    { name: "About Us", href: "/about" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "FAQ", href: "/#faq" },
+    { name: "Contact", href: "/contact" },
   ],
 };
 
 const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Facebook, href: "https://www.facebook.com/people/Digi-Flavour/pfbid0G3mH8fYUft91x1ATGfWEqZNpWruvVoqsXd1eNMU37qc87DdPuYKwyVjG1iScEuFHl/", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/digital_flavour_indore", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/digital-flavour/", label: "LinkedIn" },
+  { icon: Youtube, href: "https://www.youtube.com/@DigitalFlavour", label: "YouTube" },
 ];
+
+const contactInfo = {
+  email: "marketing@digitalflavour.co",
+  phone: "9111268785",
+  address: "16, Juna Pitha Main Rd, G - 2, Keshavkunj, Ahilya Pura, Indore, Madhya Pradesh 452007",
+};
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -67,6 +69,8 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
                   className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
                 >
@@ -110,20 +114,39 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-6">Resources</h3>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-background/70 hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
+            <h3 className="font-semibold mb-6">Contact Us</h3>
+            <ul className="space-y-4">
+              <li>
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="flex items-start gap-3 text-background/70 hover:text-primary transition-colors"
+                >
+                  <Mail className="w-5 h-5 mt-0.5 shrink-0" />
+                  <span>{contactInfo.email}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:+91${contactInfo.phone}`}
+                  className="flex items-start gap-3 text-background/70 hover:text-primary transition-colors"
+                >
+                  <Phone className="w-5 h-5 mt-0.5 shrink-0" />
+                  <span>+91 {contactInfo.phone}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://maps.google.com/?q=16, Juna Pitha Main Rd, G - 2, Keshavkunj, Ahilya Pura, Indore, Madhya Pradesh 452007"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 text-background/70 hover:text-primary transition-colors"
+                >
+                  <MapPin className="w-5 h-5 mt-0.5 shrink-0" />
+                  <span className="text-sm">{contactInfo.address}</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

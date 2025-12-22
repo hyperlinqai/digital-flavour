@@ -60,6 +60,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Digital Flavour brand colors
+        "df-orange": "hsl(var(--df-orange))",
+        "df-green": "hsl(var(--df-green))",
+        "df-dark": "hsl(var(--df-dark))",
       },
       borderRadius: {
         lg: "var(--radius)",

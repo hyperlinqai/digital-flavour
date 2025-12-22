@@ -3,8 +3,8 @@ import { ArrowRight, Star, TrendingUp, Users, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { icon: Award, value: "11+", label: "Years Experience" },
-  { icon: Users, value: "100+", label: "Happy Clients" },
+  { icon: Award, value: "3+", label: "Years Experience" },
+  { icon: Users, value: "90+", label: "Happy Clients" },
   { icon: TrendingUp, value: "3x", label: "Average Lead Growth" },
 ];
 
@@ -14,7 +14,8 @@ const Hero = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto container-padding pt-24 pb-16 relative z-10">
@@ -35,19 +36,19 @@ const Hero = () => {
             >
               <Star className="w-4 h-4 text-primary fill-primary" />
               <span className="text-accent-foreground text-sm font-medium">
-                Rated 4.7/5 by 100+ Clients
+                Top Rated Digital Marketing Agency in Indore
               </span>
             </motion.div>
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Digital Marketing That{" "}
-              <span className="text-gradient">Delivers Results</span>
+              #1 Digital Marketing Agency in{" "}
+              <span className="text-gradient">Indore</span>
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-              Transform your online presence with data-driven strategies. 
-              We help businesses in Bangalore grow their digital footprint 
+              Transform your online presence with data driven strategies. 
+              We help businesses in Indore and across Madhya Pradesh grow their digital footprint 
               and convert visitors into loyal customers.
             </p>
 
@@ -102,11 +103,11 @@ const Hero = () => {
                       <div className="h-full w-4/5 bg-primary rounded-full" />
                     </div>
                   </div>
-                  <div className="bg-accent rounded-xl p-4">
+                  <div className="bg-secondary/10 rounded-xl p-4">
                     <div className="text-sm text-muted-foreground mb-1">Lead Conversion</div>
                     <div className="text-2xl font-bold text-foreground">+150%</div>
-                    <div className="h-2 bg-primary/20 rounded-full mt-2">
-                      <div className="h-full w-3/5 bg-primary rounded-full" />
+                    <div className="h-2 bg-secondary/20 rounded-full mt-2">
+                      <div className="h-full w-3/5 bg-secondary rounded-full" />
                     </div>
                   </div>
                 </div>
@@ -132,12 +133,12 @@ const Hero = () => {
                 className="absolute -top-6 -right-6 bg-card rounded-xl p-4 card-shadow"
               >
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <TrendingUp className="w-4 h-4 text-primary" />
+                  <div className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center">
+                    <TrendingUp className="w-4 h-4 text-secondary" />
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground">Revenue</div>
-                    <div className="font-bold text-foreground">↑ 42%</div>
+                    <div className="font-bold text-secondary">↑ 42%</div>
                   </div>
                 </div>
               </motion.div>
@@ -152,7 +153,7 @@ const Hero = () => {
           transition={{ delay: 0.8 }}
           className="mt-16 pt-12 border-t border-border"
         >
-          <p className="text-center text-muted-foreground mb-8">Trusted by Leading Brands</p>
+          <p className="text-center text-muted-foreground mb-8">Trusted by Leading Brands in Indore & Beyond</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
             {["TechCorp", "Innovate", "GrowthLab", "NextGen", "Startup+"].map((brand) => (
               <div
