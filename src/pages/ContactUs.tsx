@@ -408,7 +408,7 @@ const ContactUs = () => {
             className="rounded-2xl overflow-hidden card-shadow"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.0123456789!2d75.8567!3d22.7196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDQzJzEwLjYiTiA3NcKwNTEnMjQuMSJF!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.8!2d75.8516194!3d22.71746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd2bc12c2285%3A0xf916ffd289470421!2sDigital%20Flavour%20%7C%20Best%20Digital%20Marketing%20Agency%20in%20Indore!5e0!3m2!1sen!2sin!4v1703251200000"
               width="100%"
               height="400"
               style={{ border: 0 }}
