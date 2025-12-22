@@ -52,7 +52,7 @@ const AnimatedCounter = ({ value, suffix, inView }: { value: number; suffix: str
   }, [value, inView]);
 
   return (
-    <span className="text-4xl md:text-5xl font-bold text-primary">
+    <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
       {count}{suffix}
     </span>
   );
@@ -66,7 +66,7 @@ const About = () => {
     <section id="about" className="section-padding bg-secondary/10">
       <div className="container mx-auto container-padding">
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center mb-12 sm:mb-20">
           {/* Left - Founder Image & Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -103,40 +103,40 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="inline-block text-primary font-semibold mb-4">
+            <span className="inline-block text-primary font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
               About Us
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
               Your Partner in{" "}
               <span className="text-gradient">Digital Success</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
+            <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">
               Founded in 2022 in Indore, Digital Flavour has been at the forefront of digital marketing 
               innovation in Madhya Pradesh. We blend performance driven marketing with conversion optimized 
               tech to deliver scalable ROI for businesses across Indore and beyond.
             </p>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
               Under the leadership of Ragini Neema, our team is passionate about helping 
               brands navigate the digital landscape. We believe in transparent communication, 
               measurable outcomes, and building lasting partnerships with our clients.
             </p>
 
             {/* Checkmarks */}
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
               {[
                 "Data driven strategies tailored to your goals",
                 "Transparent reporting and communication",
                 "Dedicated team of certified experts",
                 "Proven track record of success",
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">{item}</span>
+                <li key={item} className="flex items-start gap-2 sm:gap-3">
+                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-secondary mt-0.5 flex-shrink-0" />
+                  <span className="text-foreground text-sm sm:text-base">{item}</span>
                 </li>
               ))}
             </ul>
 
-            <Button variant="hero" size="lg" asChild>
+            <Button variant="hero" size="lg" className="text-sm sm:text-base" asChild>
               <a href="/about">
                 Learn More About Us
                 <ArrowRight className="w-4 h-4" />
@@ -146,7 +146,7 @@ const About = () => {
         </div>
 
         {/* Values */}
-        <div className="grid md:grid-cols-3 gap-6 mb-20">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-20">
           {values.map((value, index) => (
             <motion.div
               key={value.title}
@@ -180,9 +180,9 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-card rounded-3xl p-8 md:p-12 card-shadow"
+          className="bg-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 card-shadow"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-4">
             {counters.map((counter) => (
               <div key={counter.label} className="text-center">
                 <AnimatedCounter 
@@ -190,7 +190,7 @@ const About = () => {
                   suffix={counter.suffix} 
                   inView={isInView} 
                 />
-                <p className="text-muted-foreground mt-2">{counter.label}</p>
+                <p className="text-muted-foreground mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">{counter.label}</p>
               </div>
             ))}
           </div>

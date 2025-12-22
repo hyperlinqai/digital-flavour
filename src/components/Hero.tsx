@@ -32,39 +32,43 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-2 mb-6"
+              className="inline-flex items-center gap-2 bg-accent rounded-full px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6"
             >
-              <Star className="w-4 h-4 text-primary fill-primary" />
-              <span className="text-accent-foreground text-sm font-medium">
-                Top Rated Digital Marketing Agency in Indore
+              <Star className="w-3 h-3 sm:w-4 sm:h-4 text-primary fill-primary" />
+              <span className="text-accent-foreground text-xs sm:text-sm font-medium">
+                Top Digital Marketing Agency in Indore
               </span>
             </motion.div>
 
             {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
               #1 Digital Marketing Agency in{" "}
               <span className="text-gradient">Indore</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
               Transform your online presence with data driven strategies. 
               We help businesses in Indore and across Madhya Pradesh grow their digital footprint 
               and convert visitors into loyal customers.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <Button variant="hero" size="xl">
-                Get Your Free Growth Strategy
-                <ArrowRight className="w-5 h-5" />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-12">
+              <Button variant="hero" size="lg" className="text-sm sm:text-base" asChild>
+                <a href="/contact">
+                  Get Free Growth Strategy
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                </a>
               </Button>
-              <Button variant="hero-outline" size="xl">
-                View Our Work
+              <Button variant="hero-outline" size="lg" className="text-sm sm:text-base" asChild>
+                <a href="/portfolio">
+                  View Our Work
+                </a>
               </Button>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-3 sm:gap-6">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -73,13 +77,13 @@ const Hero = () => {
                   transition={{ delay: 0.4 + index * 0.1 }}
                   className="text-center lg:text-left"
                 >
-                  <div className="flex items-center gap-2 justify-center lg:justify-start mb-1">
-                    <stat.icon className="w-5 h-5 text-primary" />
-                    <span className="text-2xl md:text-3xl font-bold text-foreground">
+                  <div className="flex items-center gap-1 sm:gap-2 justify-center lg:justify-start mb-1">
+                    <stat.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                    <span className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
                       {stat.value}
                     </span>
                   </div>
-                  <span className="text-sm text-muted-foreground">{stat.label}</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">{stat.label}</span>
                 </motion.div>
               ))}
             </div>
@@ -151,14 +155,14 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="mt-16 pt-12 border-t border-border"
+          className="mt-10 sm:mt-16 pt-8 sm:pt-12 border-t border-border"
         >
-          <p className="text-center text-muted-foreground mb-8">Trusted by Leading Brands in Indore & Beyond</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+          <p className="text-center text-muted-foreground text-sm sm:text-base mb-6 sm:mb-8">Trusted by Leading Brands in Indore & Beyond</p>
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 md:gap-16 opacity-60">
             {["TechCorp", "Innovate", "GrowthLab", "NextGen", "Startup+"].map((brand) => (
               <div
                 key={brand}
-                className="text-xl md:text-2xl font-bold text-muted-foreground hover:text-foreground transition-colors cursor-default"
+                className="text-base sm:text-xl md:text-2xl font-bold text-muted-foreground hover:text-foreground transition-colors cursor-default"
               >
                 {brand}
               </div>

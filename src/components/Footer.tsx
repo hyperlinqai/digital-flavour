@@ -13,7 +13,9 @@ import {
 const footerLinks = {
   services: [
     { name: "Local SEO", href: "/services/local-seo" },
+    { name: "Global SEO", href: "/services/global-seo" },
     { name: "Google Ads", href: "/services/google-ads" },
+    { name: "Meta Ads", href: "/services/meta-ads" },
     { name: "Lead Generation", href: "/services/lead-generation" },
     { name: "E Commerce Marketing", href: "/services/ecommerce-marketing" },
     { name: "Web Design", href: "/services/web-design" },

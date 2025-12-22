@@ -157,6 +157,13 @@
   .container-padding {
     @apply px-4 sm:px-6 lg:px-8;
   }
+
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    .section-padding {
+      @apply py-12;
+    }
+  }
 }
 
 @keyframes countUp {
