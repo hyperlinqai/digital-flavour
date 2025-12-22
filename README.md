@@ -1,4 +1,4 @@
-# Digimark Style Guide
+# Digital Flavour Style Guide
 
 Front-end style guide for the Digimark marketing site, built with Vite, React, TypeScript, Tailwind CSS, and shadcn/ui components.
 
