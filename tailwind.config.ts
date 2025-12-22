@@ -62,7 +62,7 @@ export default {
         },
         // Digital Flavour brand colors
         "df-orange": "hsl(var(--df-orange))",
-        "df-green": "hsl(var(--df-green))",
+        "df-blue": "hsl(var(--df-blue))",
         "df-dark": "hsl(var(--df-dark))",
       },
       borderRadius: {

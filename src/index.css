@@ -19,8 +19,8 @@
     --primary: 28 94% 54%;
     --primary-foreground: 0 0% 100%;
 
-    /* Digital Flavour Green - matches logo leaves */
-    --secondary: 134 52% 47%;
+    /* Digital Flavour Blue - accent color */
+    --secondary: 210 80% 50%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 96%;
@@ -41,10 +41,10 @@
 
     /* Custom Digital Flavour tokens */
     --df-orange: 28 94% 54%;
-    --df-green: 134 52% 47%;
+    --df-blue: 210 80% 50%;
     --df-dark: 0 0% 20%;
     
-    --hero-gradient: linear-gradient(135deg, hsl(28 94% 54% / 0.08) 0%, hsl(134 52% 47% / 0.03) 50%, hsl(0 0% 98%) 100%);
+    --hero-gradient: linear-gradient(135deg, hsl(28 94% 54% / 0.08) 0%, hsl(210 80% 50% / 0.03) 50%, hsl(0 0% 98%) 100%);
     --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.08);
     --card-shadow-hover: 0 8px 30px -4px hsl(28 94% 54% / 0.25);
     --text-gradient: linear-gradient(135deg, hsl(28 94% 54%) 0%, hsl(28 94% 42%) 100%);
@@ -73,8 +73,8 @@
     --primary: 28 94% 54%;
     --primary-foreground: 0 0% 100%;
 
-    /* Digital Flavour Green - matches logo leaves */
-    --secondary: 134 52% 47%;
+    /* Digital Flavour Blue - accent color */
+    --secondary: 210 80% 50%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 18%;
@@ -93,10 +93,10 @@
 
     /* Custom Digital Flavour tokens - dark mode */
     --df-orange: 28 94% 54%;
-    --df-green: 134 52% 47%;
+    --df-blue: 210 80% 50%;
     --df-dark: 0 0% 90%;
     
-    --hero-gradient: linear-gradient(135deg, hsl(28 94% 54% / 0.12) 0%, hsl(134 52% 47% / 0.05) 50%, hsl(0 0% 10%) 100%);
+    --hero-gradient: linear-gradient(135deg, hsl(28 94% 54% / 0.12) 0%, hsl(210 80% 50% / 0.05) 50%, hsl(0 0% 10%) 100%);
     --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
     --card-shadow-hover: 0 8px 30px -4px hsl(28 94% 54% / 0.35);
     
