@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { 
-  CheckCircle2, 
-  MapPin, 
-  Search, 
+import {
+  CheckCircle2,
+  MapPin,
+  Search,
   Star,
   TrendingUp,
   Users,
@@ -20,12 +20,12 @@ const benefits = [
   {
     icon: MapPin,
     title: "Dominate Local Search",
-    description: "Appear at the top of Google Maps and local search results when customers in Indore search for your services.",
+    description: "Appear at the top of Google Maps and local search results when customers search for your services in your area.",
   },
   {
     icon: Phone,
     title: "More Calls & Visits",
-    description: "Drive more phone calls, direction requests, and foot traffic to your business location in Indore.",
+    description: "Drive more phone calls, direction requests, and foot traffic to your business location.",
   },
   {
     icon: Star,
@@ -35,7 +35,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: "Outrank Competitors",
-    description: "Get ahead of your local competitors with proven SEO strategies tailored for Indore market.",
+    description: "Get ahead of your local competitors with proven SEO strategies tailored for your market.",
   },
 ];
 
@@ -63,7 +63,7 @@ const LocalSEO = () => {
   return (
     <main className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-background via-secondary/30 to-background relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
@@ -81,7 +81,7 @@ const LocalSEO = () => {
               <span className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-2 mb-6">
                 <MapPin className="w-4 h-4 text-primary" />
                 <span className="text-accent-foreground text-sm font-medium">
-                  Local SEO Services in Indore
+                  Local SEO Services
                 </span>
               </span>
             </motion.div>
@@ -92,8 +92,8 @@ const LocalSEO = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             >
-              Best Local SEO Company in{" "}
-              <span className="text-gradient">Indore</span>
+              Best Local SEO Company for{" "}
+              <span className="text-gradient">Your Business</span>
             </motion.h1>
 
             <motion.p
@@ -102,8 +102,8 @@ const LocalSEO = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
             >
-              Get found by local customers in Indore and Madhya Pradesh. Our Local SEO 
-              services help businesses dominate Google Maps, increase foot traffic, 
+              Get found by local customers in your area. Our Local SEO
+              services help businesses dominate Google Maps, increase foot traffic,
               and generate more qualified leads from their local area.
             </motion.p>
 
@@ -154,44 +154,85 @@ const LocalSEO = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background overflow-hidden">
         <div className="container mx-auto container-padding">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <span className="inline-block text-primary font-semibold mb-4">
-              Why Local SEO Matters
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Grow Your Business in <span className="text-gradient">Indore</span>
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              46% of all Google searches have local intent. Make sure your business 
-              shows up when customers in Indore are looking for your products or services.
-            </p>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="inline-block text-primary font-semibold mb-4">
+                Why Local SEO Matters
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                Grow Your Business <span className="text-gradient">Locally</span>
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                46% of all Google searches have local intent. Make sure your business
+                shows up when customers in your area are looking for your products or services.
+              </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+              <div className="grid sm:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={benefit.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
+                    className="flex flex-col gap-3"
+                  >
+                    <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
+                      <benefit.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">{benefit.title}</h3>
+                      <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Right Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden card-shadow">
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10" />
+                <img
+                  src="/images/local-seo-matter.png"
+                  alt="Local SEO Visualization"
+                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+
+              {/* Floating Badge */}
               <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-2xl p-6 card-shadow hover:card-shadow-hover transition-all duration-300"
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl card-shadow z-20 hidden md:block"
               >
-                <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-4">
-                  <benefit.icon className="w-7 h-7 text-primary" />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-green-500" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground">Local Traffic</p>
+                    <p className="text-lg font-bold text-foreground">+280%</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-foreground">{benefit.title}</h3>
-                <p className="text-muted-foreground text-sm">{benefit.description}</p>
               </motion.div>
-            ))}
+            </motion.div>
           </div>
         </div>
       </section>
@@ -210,11 +251,11 @@ const LocalSEO = () => {
                 Our Local SEO Services
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Complete Local SEO Solutions for <span className="text-gradient">Indore Businesses</span>
+                Complete Local SEO Solutions for <span className="text-gradient">Local Businesses</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We provide comprehensive local SEO services designed specifically for 
-                businesses in Indore and surrounding areas of Madhya Pradesh.
+                We provide comprehensive local SEO services designed specifically for
+                businesses looking to dominate their local market.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4">
@@ -245,8 +286,8 @@ const LocalSEO = () => {
                 Get Your Free Local SEO Audit
               </h3>
               <p className="text-muted-foreground mb-6">
-                Discover how your business ranks locally and get actionable recommendations 
-                to improve your visibility in Indore.
+                Discover how your business ranks locally and get actionable recommendations
+                to improve your visibility in your city.
               </p>
               <ul className="space-y-4 mb-8">
                 {[
@@ -293,7 +334,7 @@ const LocalSEO = () => {
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { step: "01", title: "Audit & Analysis", description: "We analyze your current local presence and identify opportunities" },
-              { step: "02", title: "Strategy Development", description: "Create a custom local SEO strategy for your Indore business" },
+              { step: "02", title: "Strategy Development", description: "Create a custom local SEO strategy for your business" },
               { step: "03", title: "Implementation", description: "Optimize your GMB profile, build citations, and create local content" },
               { step: "04", title: "Monitor & Improve", description: "Track rankings, analyze results, and continuously optimize" },
             ].map((item, index) => (
@@ -326,15 +367,15 @@ const LocalSEO = () => {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
-              Ready to Dominate Local Search in Indore?
+              Ready to Dominate Local Search?
             </h2>
             <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
               Get found by more local customers. Start your Local SEO journey today.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button 
-                variant="secondary" 
-                size="xl" 
+              <Button
+                variant="secondary"
+                size="xl"
                 className="bg-background text-foreground hover:bg-background/90"
                 asChild
               >
@@ -343,9 +384,9 @@ const LocalSEO = () => {
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
-              <Button 
-                variant="outline" 
-                size="xl" 
+              <Button
+                variant="outline"
+                size="xl"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
                 asChild
               >

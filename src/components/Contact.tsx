@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, ArrowRight } from "lucide-react";
+import { Phone, Mail, Clock, Send, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -20,10 +20,10 @@ const contactInfo = [
     href: "mailto:marketing@digitalflavour.co",
   },
   {
-    icon: MapPin,
-    title: "Location",
-    value: "Indore, Madhya Pradesh",
-    href: "https://maps.google.com/?q=16, Juna Pitha Main Rd, G - 2, Keshavkunj, Ahilya Pura, Indore, Madhya Pradesh 452007",
+    icon: Clock,
+    title: "Timing",
+    value: "10 am to 7 pm",
+    href: null,
   },
 ];
 
@@ -79,7 +79,7 @@ const Contact = () => {
             <span className="text-gradient">Grow Your Business?</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Let's discuss how we can help you achieve your digital marketing goals. 
+            Let's discuss how we can help you achieve your digital marketing goals.
             Get your free growth strategy today.
           </p>
         </motion.div>
@@ -93,25 +93,28 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2 space-y-8"
           >
-            {contactInfo.map((info, index) => (
-              <motion.a
-                key={info.title}
-                href={info.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start gap-4 p-4 bg-card rounded-xl card-shadow hover:card-shadow-hover transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center group-hover:bg-primary transition-colors">
-                  <info.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
-                  <p className="text-muted-foreground">{info.value}</p>
-                </div>
-              </motion.a>
-            ))}
+            {contactInfo.map((info, index) => {
+              const Component = info.href ? motion.a : motion.div;
+              return (
+                <Component
+                  key={info.title}
+                  href={info.href || undefined}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start gap-4 p-4 bg-card rounded-xl card-shadow hover:card-shadow-hover transition-all duration-300 group cursor-pointer"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center group-hover:bg-primary transition-colors">
+                    <info.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
+                    <p className="text-muted-foreground">{info.value}</p>
+                  </div>
+                </Component>
+              );
+            })}
 
             {/* Additional CTA */}
             <div className="bg-primary rounded-2xl p-6 text-center">
@@ -121,8 +124,8 @@ const Contact = () => {
               <p className="text-primary-foreground/80 mb-4 text-sm">
                 Let's discuss your project and create a custom strategy.
               </p>
-              <Button 
-                variant="secondary" 
+              <Button
+                variant="secondary"
                 className="bg-background text-foreground hover:bg-background/90"
               >
                 Schedule a Call
@@ -139,8 +142,8 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-3"
           >
-            <form 
-              onSubmit={handleSubmit} 
+            <form
+              onSubmit={handleSubmit}
               className="bg-card rounded-2xl p-6 md:p-8 card-shadow"
             >
               <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -207,10 +210,10 @@ const Contact = () => {
                 />
               </div>
 
-              <Button 
-                type="submit" 
-                variant="hero" 
-                size="lg" 
+              <Button
+                type="submit"
+                variant="hero"
+                size="lg"
                 className="w-full"
                 disabled={isSubmitting}
               >

@@ -22,10 +22,10 @@ const values = [
 ];
 
 const counters = [
-  { value: 500, suffix: "+", label: "Projects Completed" },
-  { value: 100, suffix: "+", label: "Happy Clients" },
-  { value: 11, suffix: "+", label: "Years Experience" },
-  { value: 95, suffix: "%", label: "Client Retention" },
+  { value: 150, suffix: "+", label: "Projects Completed" },
+  { value: 70, suffix: "+", label: "Happy Clients" },
+  { value: 5, suffix: "+", label: "Years Experience" },
+  { value: 93, suffix: "%", label: "Client Retention" },
 ];
 
 const AnimatedCounter = ({ value, suffix, inView }: { value: number; suffix: string; inView: boolean }) => {
@@ -33,11 +33,11 @@ const AnimatedCounter = ({ value, suffix, inView }: { value: number; suffix: str
 
   useEffect(() => {
     if (!inView) return;
-    
+
     let start = 0;
     const duration = 2000;
     const increment = value / (duration / 16);
-    
+
     const timer = setInterval(() => {
       start += increment;
       if (start >= value) {
@@ -111,13 +111,13 @@ const About = () => {
               <span className="text-gradient">Digital Success</span>
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">
-              Founded in 2022 in Indore, Digital Flavour has been at the forefront of digital marketing 
-              innovation in Madhya Pradesh. We blend performance driven marketing with conversion optimized 
-              tech to deliver scalable ROI for businesses across Indore and beyond.
+              Digital Flavour has been at the forefront of digital marketing
+              innovation. We blend performance driven marketing with conversion optimized
+              tech to deliver scalable ROI for businesses globally.
             </p>
             <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
-              Under the leadership of Ragini Neema, our team is passionate about helping 
-              brands navigate the digital landscape. We believe in transparent communication, 
+              Under the leadership of Ragini Neema, our team is passionate about helping
+              brands navigate the digital landscape. We believe in transparent communication,
               measurable outcomes, and building lasting partnerships with our clients.
             </p>
 
@@ -185,10 +185,10 @@ const About = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-4">
             {counters.map((counter) => (
               <div key={counter.label} className="text-center">
-                <AnimatedCounter 
-                  value={counter.value} 
-                  suffix={counter.suffix} 
-                  inView={isInView} 
+                <AnimatedCounter
+                  value={counter.value}
+                  suffix={counter.suffix}
+                  inView={isInView}
                 />
                 <p className="text-muted-foreground mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">{counter.label}</p>
               </div>

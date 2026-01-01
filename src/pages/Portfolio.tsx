@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { 
+import {
   ArrowRight,
   ExternalLink,
   TrendingUp,
@@ -97,7 +97,7 @@ const Portfolio = () => {
   return (
     <main className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 hero-gradient relative overflow-hidden">
         <div className="absolute inset-0">
@@ -135,7 +135,7 @@ const Portfolio = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
             >
-              Discover how we have helped businesses in Indore and across India 
+              Discover how we have helped businesses globally
               achieve remarkable growth through our digital marketing strategies.
             </motion.p>
           </div>
@@ -185,7 +185,7 @@ const Portfolio = () => {
               Brands We Have Helped <span className="text-gradient">Grow</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              From local businesses in Indore to brands across India, we have delivered 
+              From local businesses to brands globally, we have delivered
               measurable results that drive real business growth.
             </p>
           </motion.div>
@@ -269,7 +269,7 @@ const Portfolio = () => {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-              Trusted by Growing Brands in Indore
+              Trusted by Growing Brands
             </h2>
           </motion.div>
 
@@ -307,12 +307,12 @@ const Portfolio = () => {
               Ready to Be Our Next Success Story?
             </h2>
             <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Join 100+ businesses in Indore that have achieved remarkable growth with Digital Flavour.
+              Join 100+ businesses that have achieved remarkable growth with Digital Flavour.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button 
-                variant="secondary" 
-                size="xl" 
+              <Button
+                variant="secondary"
+                size="xl"
                 className="bg-background text-foreground hover:bg-background/90"
                 asChild
               >
@@ -321,9 +321,9 @@ const Portfolio = () => {
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
-              <Button 
-                variant="outline" 
-                size="xl" 
+              <Button
+                variant="outline"
+                size="xl"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
                 asChild
               >

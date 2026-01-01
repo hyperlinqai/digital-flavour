@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { 
-  CheckCircle2, 
-  Target, 
-  Lightbulb, 
-  Rocket, 
+import {
+  CheckCircle2,
+  Target,
+  Lightbulb,
+  Rocket,
   Award,
   Users,
   TrendingUp,
@@ -60,7 +60,7 @@ const AboutUs = () => {
   return (
     <main className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 hero-gradient relative overflow-hidden">
         {/* Background Pattern */}
@@ -85,8 +85,8 @@ const AboutUs = () => {
                 <span className="text-gradient">Digital Growth</span> Partner
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Founded in 2022, Digital Flavour has been transforming businesses 
-                through innovative digital marketing strategies. We blend performance driven 
+                Digital Flavour has been transforming businesses
+                through innovative digital marketing strategies. We blend performance driven
                 marketing with conversion optimized tech to deliver scalable ROI.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -191,15 +191,15 @@ const AboutUs = () => {
                 Founder & CEO, Digital Flavour
               </p>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Ragini Neema is a visionary digital marketing expert with a passion for 
-                helping businesses achieve exponential growth. With years of experience 
-                in performance marketing, SEO, and brand strategy, she founded Digital 
+                Ragini Neema is a visionary digital marketing expert with a passion for
+                helping businesses achieve exponential growth. With years of experience
+                in performance marketing, SEO, and brand strategy, she founded Digital
                 Flavour to bridge the gap between businesses and their digital potential.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Under her leadership, Digital Flavour has helped over 100+ businesses 
-                scale their online presence, generate qualified leads, and achieve 
-                measurable ROI. Her data driven approach and commitment to client success 
+                Under her leadership, Digital Flavour has helped over 100+ businesses
+                scale their online presence, generate qualified leads, and achieve
+                measurable ROI. Her data driven approach and commitment to client success
                 have made Digital Flavour a trusted name in the industry.
               </p>
               <a
@@ -248,8 +248,8 @@ const AboutUs = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To empower businesses of all sizes with innovative digital marketing 
-                solutions that drive measurable growth. We're committed to turning 
+                To empower businesses of all sizes with innovative digital marketing
+                solutions that drive measurable growth. We're committed to turning
                 clicks into customers and campaigns into sustainable revenue streams.
               </p>
             </motion.div>
@@ -266,8 +266,8 @@ const AboutUs = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be the most trusted digital growth partner for businesses across India, 
-                known for delivering exceptional results, fostering long term relationships, 
+                To be the most trusted digital growth partner for businesses globally,
+                known for delivering exceptional results, fostering long term relationships,
                 and setting new standards in digital marketing excellence.
               </p>
             </motion.div>
@@ -334,11 +334,11 @@ const AboutUs = () => {
                 Comprehensive <span className="text-gradient">Digital Solutions</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Whether you're a local brand hungry for leads or an online business seeking 
-                predictable growth, we design strategies that make strangers want to buy 
+                Whether you're a local brand hungry for leads or an online business seeking
+                predictable growth, we design strategies that make strangers want to buy
                 from you and keep coming back.
               </p>
-              
+
               <div className="grid sm:grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <motion.div
@@ -430,9 +430,9 @@ const AboutUs = () => {
             <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
               Your customers are searching. Let's make sure they find you.
             </p>
-            <Button 
-              variant="secondary" 
-              size="xl" 
+            <Button
+              variant="secondary"
+              size="xl"
               className="bg-background text-foreground hover:bg-background/90"
               asChild
             >

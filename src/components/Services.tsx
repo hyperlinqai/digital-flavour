@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { 
-  Search, 
-  LineChart, 
-  Megaphone, 
-  ShoppingCart, 
-  Globe, 
+import {
+  Search,
+  LineChart,
+  Megaphone,
+  ShoppingCart,
+  Globe,
   Share2,
   ArrowRight,
   Target
@@ -15,7 +15,7 @@ const services = [
   {
     icon: Search,
     title: "Local SEO Optimization",
-    description: "Dominate local search rankings in Indore with data driven SEO strategies.",
+    description: "Dominate local search rankings in your area with data driven SEO strategies.",
     features: ["Google Business Profile", "Local Citations", "Review Management"],
     href: "/services/local-seo",
   },
@@ -90,7 +90,7 @@ const Services = () => {
             <span className="text-gradient">Marketing Solutions</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground">
-            From SEO to paid advertising, we offer end to end digital marketing 
+            From SEO to paid advertising, we offer end to end digital marketing
             services to help your business thrive online.
           </p>
         </motion.div>

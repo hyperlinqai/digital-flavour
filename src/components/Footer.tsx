@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { 
-  Linkedin, 
-  Youtube, 
-  Facebook, 
+import {
+  Linkedin,
+  Youtube,
+  Facebook,
   Instagram,
   ArrowUp,
   Mail,
@@ -23,6 +23,7 @@ const footerLinks = {
   ],
   company: [
     { name: "About Us", href: "/about" },
+    { name: "Pricing", href: "/pricing" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "FAQ", href: "/#faq" },
     { name: "Contact", href: "/contact" },
@@ -62,7 +63,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-background/70 mb-6 max-w-sm">
-              Transforming businesses through innovative digital marketing 
+              Transforming businesses through innovative digital marketing
               strategies. Your success is our mission.
             </p>
             {/* Social Links */}

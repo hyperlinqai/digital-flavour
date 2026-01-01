@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { 
-  ArrowRight, 
-  Search, 
-  Megaphone, 
-  LineChart, 
-  ShoppingCart, 
-  Globe, 
+import {
+  ArrowRight,
+  Search,
+  Megaphone,
+  LineChart,
+  ShoppingCart,
+  Globe,
   Share2,
   Target,
   Zap,
@@ -19,7 +19,7 @@ const services = [
   {
     icon: Search,
     title: "Local SEO Optimization",
-    description: "Dominate local search results in Indore and across Madhya Pradesh. Get found by customers searching for your services nearby.",
+    description: "Dominate local search results in your area. Get found by customers searching for your services nearby.",
     features: ["Google Business Profile", "Local Citations", "Review Management", "Local Keywords"],
     href: "/services/local-seo",
     color: "bg-orange-500/10",
@@ -113,7 +113,7 @@ const Services = () => {
               <span className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-2 mb-6">
                 <Zap className="w-4 h-4 text-primary" />
                 <span className="text-accent-foreground text-sm font-medium">
-                  Digital Marketing Services in Indore
+                  Digital Marketing Services
                 </span>
               </span>
             </motion.div>
@@ -133,7 +133,7 @@ const Services = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
             >
-              Comprehensive digital marketing solutions to help your business grow online. 
+              Comprehensive digital marketing solutions to help your business grow online.
               From SEO to paid advertising, we have got you covered.
             </motion.p>
 
@@ -218,7 +218,7 @@ const Services = () => {
                 <span className="text-gradient">Digital Marketing</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We are not just another agency. We are your growth partners committed 
+                We are not just another agency. We are your growth partners committed
                 to delivering measurable results that impact your bottom line.
               </p>
 
@@ -250,13 +250,13 @@ const Services = () => {
                 Ready to Grow Your Business?
               </h3>
               <p className="text-primary-foreground/80 mb-8">
-                Get a free digital marketing audit and discover opportunities 
+                Get a free digital marketing audit and discover opportunities
                 to increase your online visibility and generate more leads.
               </p>
               <div className="space-y-4">
-                <Button 
-                  variant="secondary" 
-                  size="xl" 
+                <Button
+                  variant="secondary"
+                  size="xl"
                   className="w-full bg-background text-foreground hover:bg-background/90"
                   asChild
                 >
@@ -265,9 +265,9 @@ const Services = () => {
                     <ArrowRight className="w-5 h-5" />
                   </a>
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="xl" 
+                <Button
+                  variant="outline"
+                  size="xl"
                   className="w-full border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
                   asChild
                 >

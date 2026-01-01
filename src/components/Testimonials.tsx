@@ -4,7 +4,7 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Priya Sharma",
-    role: "CEO, TechStart Indore",
+    role: "CEO, TechStart",
     content: "Digital Flavour transformed our online presence completely. Our organic traffic increased by 280% in just 6 months. Their team is incredibly professional and responsive.",
     rating: 5,
     image: "PS",
@@ -12,13 +12,13 @@ const testimonials = [
   {
     name: "Rahul Mehta",
     role: "Marketing Director, GrowthCo",
-    content: "The ROI we have seen from our Google Ads campaigns has been phenomenal. Digital Flavour's data driven approach really sets them apart from other agencies in Indore.",
+    content: "The ROI we have seen from our Google Ads campaigns has been phenomenal. Digital Flavour's data driven approach really sets them apart from other agencies.",
     rating: 5,
     image: "RM",
   },
   {
     name: "Ananya Patel",
-    role: "Founder, EduLearn MP",
+    role: "Founder, EduLearn",
     content: "We have tried multiple agencies before, but Digital Flavour is the only one that truly delivered on their promises. Our lead generation has tripled!",
     rating: 5,
     image: "AP",
@@ -45,8 +45,8 @@ const Testimonials = () => {
             <span className="text-gradient">Clients Say</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Do not just take our word for it. Here is what our clients from Indore and 
-            across India have to say about their experience working with Digital Flavour.
+            Do not just take our word for it. Here is what our clients
+            globally have to say about their experience working with Digital Flavour.
           </p>
         </motion.div>
 
@@ -104,10 +104,10 @@ const Testimonials = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "4.7/5", label: "Average Rating" },
-              { value: "100+", label: "Happy Clients" },
-              { value: "280%", label: "Avg. Traffic Increase" },
-              { value: "95%", label: "Client Retention" },
+              { value: "4.5/5", label: "Average Rating" },
+              { value: "70+", label: "Happy Clients" },
+              { value: "195%", label: "Avg. Traffic Increase" },
+              { value: "93%", label: "Client Retention" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">

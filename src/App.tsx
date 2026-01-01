@@ -3,7 +3,9 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import Index from "./pages/Index";
+import Pricing from "./pages/Pricing";
 import AboutUs from "./pages/AboutUs";
 import Portfolio from "./pages/Portfolio";
 import ContactUs from "./pages/ContactUs";
@@ -26,8 +28,10 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <WhatsAppButton />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<ContactUs />} />

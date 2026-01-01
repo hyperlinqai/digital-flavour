@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  Users, 
-  TrendingUp, 
+import {
+  ArrowRight,
+  CheckCircle2,
+  Users,
+  TrendingUp,
   Target,
   BarChart3,
   Zap,
@@ -139,17 +139,16 @@ const MetaAds = () => {
               <span className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-2 mb-6">
                 <Share2 className="w-4 h-4 text-primary" />
                 <span className="text-accent-foreground text-sm font-medium">
-                  Meta Ads Services in Indore
+                  Meta Ads Services
                 </span>
               </span>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Meta Ads Management{" "}
-                <span className="text-gradient">Agency in Indore</span>
+                Meta Ads <span className="text-gradient">Management Agency</span>
               </h1>
 
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Reach billions of users on Facebook, Instagram, and WhatsApp with 
+                Reach billions of users on Facebook, Instagram, and WhatsApp with
                 targeted Meta advertising campaigns that drive real business results.
               </p>
 
@@ -223,44 +222,85 @@ const MetaAds = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background overflow-hidden">
         <div className="container mx-auto container-padding">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <span className="inline-block text-primary font-semibold mb-4">
-              Why Meta Ads?
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Benefits of <span className="text-gradient">Meta Advertising</span>
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Leverage the power of the world's largest social media platforms 
-              to grow your business in Indore and beyond.
-            </p>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="inline-block text-primary font-semibold mb-4">
+                Why Meta Ads?
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                Benefits of <span className="text-gradient">Meta Advertising</span>
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Leverage the power of the world's largest social media platforms
+                to grow your business.
+              </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+              <div className="grid sm:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={benefit.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
+                    className="flex flex-col gap-3"
+                  >
+                    <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
+                      <benefit.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">{benefit.title}</h3>
+                      <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Right Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden card-shadow">
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10" />
+                <img
+                  src="/images/meta-ads-concept.png"
+                  alt="Meta Ads Visualization"
+                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+
+              {/* Floating Badge */}
               <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-2xl p-6 card-shadow hover:card-shadow-hover transition-all duration-300"
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl card-shadow z-20 hidden md:block"
               >
-                <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-4">
-                  <benefit.icon className="w-6 h-6 text-primary" />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
+                    <Users className="w-5 h-5 text-blue-500" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground">Daily Users</p>
+                    <p className="text-lg font-bold text-foreground">3B+ Active</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
               </motion.div>
-            ))}
+            </motion.div>
           </div>
         </div>
       </section>
@@ -322,7 +362,7 @@ const MetaAds = () => {
               Ready to Advertise on Meta Platforms?
             </h2>
             <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Get a free Meta Ads audit and discover opportunities to grow your business in Indore.
+              Get a free Meta Ads audit and discover opportunities to grow your business.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button

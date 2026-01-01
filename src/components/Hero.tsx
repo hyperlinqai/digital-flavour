@@ -3,9 +3,9 @@ import { ArrowRight, Star, TrendingUp, Users, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { icon: Award, value: "3+", label: "Years Experience" },
-  { icon: Users, value: "90+", label: "Happy Clients" },
-  { icon: TrendingUp, value: "3x", label: "Average Lead Growth" },
+  { icon: Award, value: "2+", label: "Years Experience" },
+  { icon: Users, value: "60+", label: "Happy Clients" },
+  { icon: TrendingUp, value: "2x", label: "Average Lead Growth" },
 ];
 
 const Hero = () => {
@@ -36,19 +36,18 @@ const Hero = () => {
             >
               <Star className="w-3 h-3 sm:w-4 sm:h-4 text-primary fill-primary" />
               <span className="text-accent-foreground text-xs sm:text-sm font-medium">
-                Top Digital Marketing Agency in Indore
+                Top Digital Marketing Agency
               </span>
             </motion.div>
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-              #1 Digital Marketing Agency in{" "}
-              <span className="text-gradient">Indore</span>
+              #1 Digital Marketing <span className="text-gradient">Agency</span>
             </h1>
 
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
-              Transform your online presence with data driven strategies. 
-              We help businesses in Indore and across Madhya Pradesh grow their digital footprint 
+              Transform your online presence with data driven strategies.
+              We help businesses globally grow their digital footprint
               and convert visitors into loyal customers.
             </p>
 
@@ -102,20 +101,20 @@ const Hero = () => {
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-accent rounded-xl p-4">
                     <div className="text-sm text-muted-foreground mb-1">Organic Traffic</div>
-                    <div className="text-2xl font-bold text-foreground">+280%</div>
+                    <div className="text-2xl font-bold text-foreground">+195%</div>
                     <div className="h-2 bg-primary/20 rounded-full mt-2">
                       <div className="h-full w-4/5 bg-primary rounded-full" />
                     </div>
                   </div>
                   <div className="bg-secondary/10 rounded-xl p-4">
                     <div className="text-sm text-muted-foreground mb-1">Lead Conversion</div>
-                    <div className="text-2xl font-bold text-foreground">+150%</div>
+                    <div className="text-2xl font-bold text-foreground">+105%</div>
                     <div className="h-2 bg-secondary/20 rounded-full mt-2">
                       <div className="h-full w-3/5 bg-secondary rounded-full" />
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Graph Visualization */}
                 <div className="h-48 flex items-end justify-between gap-2 bg-accent rounded-xl p-4">
                   {[40, 65, 45, 80, 55, 90, 75, 95, 85, 100, 92, 110].map((height, i) => (
@@ -157,7 +156,7 @@ const Hero = () => {
           transition={{ delay: 0.8 }}
           className="mt-10 sm:mt-16 pt-8 sm:pt-12 border-t border-border"
         >
-          <p className="text-center text-muted-foreground text-sm sm:text-base mb-6 sm:mb-8">Trusted by Leading Brands in Indore & Beyond</p>
+          <p className="text-center text-muted-foreground text-sm sm:text-base mb-6 sm:mb-8">Trusted by Leading Brands</p>
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 md:gap-16 opacity-60">
             {["TechCorp", "Innovate", "GrowthLab", "NextGen", "Startup+"].map((brand) => (
               <div

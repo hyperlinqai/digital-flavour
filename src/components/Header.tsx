@@ -17,6 +17,7 @@ const serviceItems = [
 const navItems = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/#services", hasDropdown: true },
+  { name: "Pricing", href: "/pricing" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
@@ -58,11 +59,10 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-lg"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container mx-auto container-padding">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -79,7 +79,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               item.hasDropdown ? (
-                <div 
+                <div
                   key={item.name}
                   className="relative group"
                   onMouseEnter={() => setIsServicesOpen(true)}
@@ -92,7 +92,7 @@ const Header = () => {
                     {item.name}
                     <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                   </a>
-                  
+
                   {/* Dropdown Menu */}
                   {isServicesOpen && (
                     <div className="absolute top-full left-0 pt-2">

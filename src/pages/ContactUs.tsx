@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Send, 
-  ArrowRight, 
-  Clock, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Send,
+  ArrowRight,
+  Clock,
   MessageSquare,
   CheckCircle2,
   Facebook,
@@ -145,8 +145,8 @@ const ContactUs = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
             >
-              Ready to grow your business online? Connect with our digital marketing 
-              experts in Indore and get a free strategy consultation today.
+              Ready to grow your business online? Connect with our digital marketing
+              experts and get a free strategy consultation today.
             </motion.p>
           </div>
         </div>
@@ -197,8 +197,8 @@ const ContactUs = () => {
                 Your Success is Our <span className="text-gradient">Priority</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Whether you are a startup looking to establish your online presence or 
-                an established business aiming to scale, we have the expertise and 
+                Whether you are a startup looking to establish your online presence or
+                an established business aiming to scale, we have the expertise and
                 passion to help you achieve your goals.
               </p>
 
@@ -393,7 +393,7 @@ const ContactUs = () => {
             className="text-center mb-10"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-              Visit Our Office in Indore
+              Visit Our Office
             </h2>
             <p className="text-muted-foreground mt-2">
               16, Juna Pitha Main Rd, G 2, Keshavkunj, Ahilya Pura, Indore, MP 452007

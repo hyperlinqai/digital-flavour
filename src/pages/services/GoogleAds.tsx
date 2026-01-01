@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { 
-  CheckCircle2, 
-  Target, 
+import {
+  CheckCircle2,
+  Target,
   TrendingUp,
   Phone,
   ArrowRight,
@@ -18,7 +18,7 @@ const benefits = [
   {
     icon: Target,
     title: "Targeted Advertising",
-    description: "Reach the right audience in Indore with precise targeting based on keywords, location, and demographics.",
+    description: "Reach the right audience with precise targeting based on keywords, location, and demographics.",
   },
   {
     icon: DollarSign,
@@ -61,7 +61,7 @@ const GoogleAds = () => {
   return (
     <main className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-background via-secondary/30 to-background relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
@@ -79,7 +79,7 @@ const GoogleAds = () => {
               <span className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-2 mb-6">
                 <Megaphone className="w-4 h-4 text-primary" />
                 <span className="text-accent-foreground text-sm font-medium">
-                  Google Ads Agency in Indore
+                  Google Ads Agency
                 </span>
               </span>
             </motion.div>
@@ -90,8 +90,7 @@ const GoogleAds = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             >
-              Expert Google Ads Management in{" "}
-              <span className="text-gradient">Indore</span>
+              Expert Google Ads <span className="text-gradient">Management</span>
             </motion.h1>
 
             <motion.p
@@ -100,8 +99,8 @@ const GoogleAds = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
             >
-              Drive instant traffic and qualified leads with our expert Google Ads 
-              management services. We help Indore businesses maximize ROI with 
+              Drive instant traffic and qualified leads with our expert Google Ads
+              management services. We help businesses maximize ROI with
               data driven PPC campaigns.
             </motion.p>
 
@@ -152,44 +151,85 @@ const GoogleAds = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background overflow-hidden">
         <div className="container mx-auto container-padding">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <span className="inline-block text-primary font-semibold mb-4">
-              Why Choose Our Google Ads Services
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Grow Your Business with <span className="text-gradient">Google Ads</span>
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              We create and manage high performing Google Ads campaigns that deliver 
-              real results for businesses in Indore and across Madhya Pradesh.
-            </p>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="inline-block text-primary font-semibold mb-4">
+                Why Choose Our Google Ads Services
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                Grow Your Business with <span className="text-gradient">Google Ads</span>
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                We create and manage high performing Google Ads campaigns that deliver
+                real results for businesses.
+              </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+              <div className="grid sm:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={benefit.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
+                    className="flex flex-col gap-3"
+                  >
+                    <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
+                      <benefit.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">{benefit.title}</h3>
+                      <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Right Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden card-shadow">
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10" />
+                <img
+                  src="/images/google-ads-concept.png"
+                  alt="Google Ads Visualization"
+                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+
+              {/* Floating Badge */}
               <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-2xl p-6 card-shadow hover:card-shadow-hover transition-all duration-300"
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl card-shadow z-20 hidden md:block"
               >
-                <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-4">
-                  <benefit.icon className="w-7 h-7 text-primary" />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-green-500" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground">Avg. ROAS</p>
+                    <p className="text-lg font-bold text-foreground">5x Return</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-foreground">{benefit.title}</h3>
-                <p className="text-muted-foreground text-sm">{benefit.description}</p>
               </motion.div>
-            ))}
+            </motion.div>
           </div>
         </div>
       </section>
@@ -208,11 +248,11 @@ const GoogleAds = () => {
                 Our Google Ads Services
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Complete PPC Solutions for <span className="text-gradient">Indore Businesses</span>
+                Complete PPC Solutions for <span className="text-gradient">Your Business</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                From search ads to display campaigns, we offer comprehensive Google Ads 
-                management services to help your business grow in Indore.
+                From search ads to display campaigns, we offer comprehensive Google Ads
+                management services to help your business grow.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4">
@@ -243,7 +283,7 @@ const GoogleAds = () => {
                 Get Your Free PPC Audit
               </h3>
               <p className="text-muted-foreground mb-6">
-                Let us analyze your current Google Ads performance and show you 
+                Let us analyze your current Google Ads performance and show you
                 how to improve your ROI.
               </p>
               <ul className="space-y-4 mb-8">
@@ -283,12 +323,12 @@ const GoogleAds = () => {
               Ready to Scale Your Business with Google Ads?
             </h2>
             <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Partner with the best Google Ads agency in Indore. Let us help you achieve your growth goals.
+              Partner with the best Google Ads agency. Let us help you achieve your growth goals.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button 
-                variant="secondary" 
-                size="xl" 
+              <Button
+                variant="secondary"
+                size="xl"
                 className="bg-background text-foreground hover:bg-background/90"
                 asChild
               >
@@ -297,9 +337,9 @@ const GoogleAds = () => {
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
-              <Button 
-                variant="outline" 
-                size="xl" 
+              <Button
+                variant="outline"
+                size="xl"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
                 asChild
               >
