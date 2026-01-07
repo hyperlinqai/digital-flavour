@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceHeroBanner from "@/components/ServiceHeroBanner";
+import VideoWidget from "@/components/VideoWidget";
 import { Phone } from "lucide-react";
 
 const portfolioItems = [
@@ -309,6 +310,7 @@ const Portfolio = () => {
       </section>
 
       <Footer />
+      <VideoWidget videoId="dQw4w9WgXcQ" />
     </main>
   );
 };

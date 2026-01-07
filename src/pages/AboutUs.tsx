@@ -42,7 +42,7 @@ const values = [
 const achievements = [
   { number: "500+", label: "Projects Completed" },
   { number: "100+", label: "Happy Clients" },
-  { number: "3+", label: "Years of Excellence" },
+  { number: "6+", label: "Years of Excellence" },
   { number: "95%", label: "Client Retention" },
 ];
 
@@ -102,7 +102,7 @@ const AboutUs = () => {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-xl"
                 >
-                  <p className="text-3xl font-bold">3+</p>
+                  <p className="text-3xl font-bold">6+</p>
                   <p className="text-sm opacity-90">Years of Excellence</p>
                 </motion.div>
               </div>
@@ -138,7 +138,7 @@ const AboutUs = () => {
                 have made Digital Flavour a trusted name in the industry.
               </p>
               <a
-                href="https://www.linkedin.com/in/ragini-neema/"
+                href="https://www.linkedin.com/in/ragini-neema-b0194714a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"

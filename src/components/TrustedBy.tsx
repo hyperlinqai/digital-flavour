@@ -10,7 +10,7 @@ const partners = [
 
 const TrustedBy = () => {
     return (
-        <section className="py-12 bg-secondary/30">
+        <section className="py-12 bg-white">
             <div className="container mx-auto container-padding">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -19,7 +19,7 @@ const TrustedBy = () => {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-8"
                 >
-                    <p className="text-muted-foreground text-lg font-medium">
+                    <p className="text-gray-600 text-lg font-medium">
                         Trusted & Certified Partner Of
                     </p>
                 </motion.div>
