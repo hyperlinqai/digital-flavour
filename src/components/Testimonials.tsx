@@ -105,7 +105,7 @@ const Testimonials = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { value: "4.5/5", label: "Average Rating" },
-              { value: "70+", label: "Happy Clients" },
+              { value: "450+", label: "Happy Clients" },
               { value: "195%", label: "Avg. Traffic Increase" },
               { value: "93%", label: "Client Retention" },
             ].map((stat) => (

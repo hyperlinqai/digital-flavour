@@ -302,7 +302,7 @@ const Services = () => {
               className="bg-background text-foreground hover:bg-background/90"
               asChild
             >
-              <a href="/contact">
+              <a href="https://calendly.com/digiflavour243/30min" target="_blank" rel="noopener noreferrer">
                 Book Free Strategy Session
                 <ArrowRight className="w-5 h-5" />
               </a>

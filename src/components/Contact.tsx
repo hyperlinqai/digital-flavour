@@ -127,9 +127,12 @@ const Contact = () => {
               <Button
                 variant="secondary"
                 className="bg-background text-foreground hover:bg-background/90"
+                asChild
               >
-                Schedule a Call
-                <ArrowRight className="w-4 h-4" />
+                <a href="https://calendly.com/digiflavour243/30min" target="_blank" rel="noopener noreferrer">
+                  Schedule a Call
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </Button>
             </div>
           </motion.div>

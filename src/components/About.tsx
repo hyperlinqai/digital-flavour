@@ -22,9 +22,9 @@ const values = [
 ];
 
 const counters = [
-  { value: 150, suffix: "+", label: "Projects Completed" },
-  { value: 70, suffix: "+", label: "Happy Clients" },
-  { value: 5, suffix: "+", label: "Years Experience" },
+  { value: 500, suffix: "+", label: "Projects Completed" },
+  { value: 450, suffix: "+", label: "Happy Clients" },
+  { value: 6, suffix: "+", label: "Years Experience" },
   { value: 93, suffix: "%", label: "Client Retention" },
 ];
 

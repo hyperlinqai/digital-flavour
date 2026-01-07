@@ -10,6 +10,8 @@ import {
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ServiceHeroBanner from "@/components/ServiceHeroBanner";
+import { Phone } from "lucide-react";
 
 const portfolioItems = [
   {
@@ -99,48 +101,18 @@ const Portfolio = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 hero-gradient relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container mx-auto container-padding relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <span className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-2 mb-6">
-                <Award className="w-4 h-4 text-primary" />
-                <span className="text-accent-foreground text-sm font-medium">
-                  Our Work
-                </span>
-              </span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-            >
-              Our <span className="text-gradient">Portfolio</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
-            >
-              Discover how we have helped businesses globally
-              achieve remarkable growth through our digital marketing strategies.
-            </motion.p>
-          </div>
-        </div>
-      </section>
+      <ServiceHeroBanner
+        backgroundImage="/images/main-hero/portfolio.png"
+        badge={{ icon: Award, text: "Our Work" }}
+        title={
+          <>
+            Our <span className="text-gradient">Portfolio</span>
+          </>
+        }
+        description="Discover how we have helped businesses globally achieve remarkable growth through our digital marketing strategies."
+        primaryCTA={{ text: "Start Your Project", href: "/contact" }}
+        secondaryCTA={{ text: "+91 9111268785", href: "tel:+919111268785", icon: Phone }}
+      />
 
       {/* Stats Section */}
       <section className="py-12 bg-primary">

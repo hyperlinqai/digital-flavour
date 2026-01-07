@@ -3,22 +3,23 @@ import { ArrowRight, Star, TrendingUp, Users, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { icon: Award, value: "2+", label: "Years Experience" },
-  { icon: Users, value: "60+", label: "Happy Clients" },
+  { icon: Award, value: "6+", label: "Years Experience" },
+  { icon: Users, value: "450+", label: "Happy Clients" },
   { icon: TrendingUp, value: "2x", label: "Average Lead Growth" },
 ];
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center hero-gradient overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl" />
-      </div>
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/banners/home-hero-banner.png')" }}
+      />
+      {/* Dark Overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
 
-      <div className="container mx-auto container-padding pt-24 pb-16 relative z-10">
+      <div className="container mx-auto container-padding pt-32 pb-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -32,20 +33,20 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-accent rounded-full px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6"
+              className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6"
             >
               <Star className="w-3 h-3 sm:w-4 sm:h-4 text-primary fill-primary" />
-              <span className="text-accent-foreground text-xs sm:text-sm font-medium">
+              <span className="text-white text-xs sm:text-sm font-medium">
                 Top Digital Marketing Agency
               </span>
             </motion.div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6 text-white">
               #1 Digital Marketing <span className="text-gradient">Agency</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg text-white/80 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
               Transform your online presence with data driven strategies.
               We help businesses globally grow their digital footprint
               and convert visitors into loyal customers.
@@ -78,11 +79,11 @@ const Hero = () => {
                 >
                   <div className="flex items-center gap-1 sm:gap-2 justify-center lg:justify-start mb-1">
                     <stat.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                    <span className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
+                    <span className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                       {stat.value}
                     </span>
                   </div>
-                  <span className="text-xs sm:text-sm text-muted-foreground">{stat.label}</span>
+                  <span className="text-xs sm:text-sm text-white/70">{stat.label}</span>
                 </motion.div>
               ))}
             </div>
@@ -154,14 +155,14 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="mt-10 sm:mt-16 pt-8 sm:pt-12 border-t border-border"
+          className="mt-10 sm:mt-16 pt-8 sm:pt-12 border-t border-white/20"
         >
-          <p className="text-center text-muted-foreground text-sm sm:text-base mb-6 sm:mb-8">Trusted by Leading Brands</p>
-          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 md:gap-16 opacity-60">
+          <p className="text-center text-white/70 text-sm sm:text-base mb-6 sm:mb-8">Trusted by Leading Brands</p>
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 md:gap-16 opacity-70">
             {["TechCorp", "Innovate", "GrowthLab", "NextGen", "Startup+"].map((brand) => (
               <div
                 key={brand}
-                className="text-base sm:text-xl md:text-2xl font-bold text-muted-foreground hover:text-foreground transition-colors cursor-default"
+                className="text-base sm:text-xl md:text-2xl font-bold text-white/80 hover:text-white transition-colors cursor-default"
               >
                 {brand}
               </div>

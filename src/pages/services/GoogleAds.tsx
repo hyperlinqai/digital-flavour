@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ServiceHeroBanner from "@/components/ServiceHeroBanner";
 
 const benefits = [
   {
@@ -53,8 +54,8 @@ const services = [
 const stats = [
   { value: "5x", label: "Average ROAS" },
   { value: "40%", label: "Lower CPC" },
-  { value: "200+", label: "Campaigns Managed" },
-  { value: "₹2Cr+", label: "Ad Spend Managed" },
+  { value: "450+", label: "Happy Clients" },
+  { value: "6+", label: "Years Experience" },
 ];
 
 const GoogleAds = () => {
@@ -63,69 +64,18 @@ const GoogleAds = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-background via-secondary/30 to-background relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
-        </div>
-
-        <div className="container mx-auto container-padding relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <span className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-2 mb-6">
-                <Megaphone className="w-4 h-4 text-primary" />
-                <span className="text-accent-foreground text-sm font-medium">
-                  Google Ads Agency
-                </span>
-              </span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-            >
-              Expert Google Ads <span className="text-gradient">Management</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
-            >
-              Drive instant traffic and qualified leads with our expert Google Ads
-              management services. We help businesses maximize ROI with
-              data driven PPC campaigns.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-wrap gap-4 justify-center"
-            >
-              <Button variant="hero" size="xl" asChild>
-                <a href="/contact">
-                  Get Free PPC Audit
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <a href="tel:+919111268785">
-                  <Phone className="w-5 h-5" />
-                  Call Now
-                </a>
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <ServiceHeroBanner
+        backgroundImage="/images/banners/google-ads-banner.png"
+        badge={{ icon: Megaphone, text: "Google Ads Agency" }}
+        title={
+          <>
+            Expert Google Ads <span className="text-gradient">Management</span>
+          </>
+        }
+        description="Drive instant traffic and qualified leads with our expert Google Ads management services. We help businesses maximize ROI with data driven PPC campaigns."
+        primaryCTA={{ text: "Get Free PPC Audit", href: "/contact" }}
+        secondaryCTA={{ text: "Call Now", href: "tel:+919111268785", icon: Phone }}
+      />
 
       {/* Stats Section */}
       <section className="py-12 bg-primary">

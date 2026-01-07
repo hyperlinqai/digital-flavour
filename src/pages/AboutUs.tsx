@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ServiceHeroBanner from "@/components/ServiceHeroBanner";
 
 const values = [
   {
@@ -62,84 +63,18 @@ const AboutUs = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 hero-gradient relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container mx-auto container-padding relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Left - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-block text-primary font-semibold mb-4 text-lg">
-                About Digital Flavour
-              </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Your Trusted{" "}
-                <span className="text-gradient">Digital Growth</span> Partner
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Digital Flavour has been transforming businesses
-                through innovative digital marketing strategies. We blend performance driven
-                marketing with conversion optimized tech to deliver scalable ROI.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button variant="hero" size="xl" asChild>
-                  <a href="/contact">
-                    Work With Us
-                    <ArrowRight className="w-5 h-5" />
-                  </a>
-                </Button>
-                <Button variant="outline" size="xl" asChild>
-                  <a href="/#services">
-                    Our Services
-                  </a>
-                </Button>
-              </div>
-            </motion.div>
-
-            {/* Right - Founder Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-secondary/10 to-primary/10 rounded-3xl blur-2xl" />
-                <img
-                  src="/images/WhatsApp-Image-2025-02-11-at-12.31.09-PM-e1756475578188.jpeg"
-                  alt="Ragini Neema - Founder of Digital Flavour"
-                  className="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto object-cover"
-                />
-              </div>
-              {/* Floating Badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl card-shadow"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Award className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-foreground">Award Winning</p>
-                    <p className="text-sm text-muted-foreground">Digital Agency</p>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <ServiceHeroBanner
+        backgroundImage="/images/main-hero/about-us.png"
+        badge={{ icon: Award, text: "About Digital Flavour" }}
+        title={
+          <>
+            Your Trusted <span className="text-gradient">Digital Growth</span> Partner
+          </>
+        }
+        description="Digital Flavour has been transforming businesses through innovative digital marketing strategies. We blend performance-driven marketing with conversion-optimized tech to deliver scalable ROI."
+        primaryCTA={{ text: "Work With Us", href: "/contact" }}
+        secondaryCTA={{ text: "Our Services", href: "/#services" }}
+      />
 
       {/* Founder Section */}
       <section className="py-20 bg-card">
@@ -436,7 +371,7 @@ const AboutUs = () => {
               className="bg-background text-foreground hover:bg-background/90"
               asChild
             >
-              <a href="/contact">
+              <a href="https://calendly.com/digiflavour243/30min" target="_blank" rel="noopener noreferrer">
                 Book Your Free Audit
                 <ArrowRight className="w-5 h-5" />
               </a>

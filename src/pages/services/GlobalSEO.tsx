@@ -11,17 +11,19 @@ import {
   MapPin,
   Zap,
   Shield,
-  Link2
+  Link2,
+  Phone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ServiceHeroBanner from "@/components/ServiceHeroBanner";
 
 const stats = [
   { value: "50+", label: "Countries Targeted" },
   { value: "300%", label: "Avg Traffic Growth" },
-  { value: "15+", label: "Languages Supported" },
-  { value: "10x", label: "Global Reach" },
+  { value: "450+", label: "Happy Clients" },
+  { value: "6+", label: "Years Experience" },
 ];
 
 const benefits = [
@@ -123,78 +125,19 @@ const GlobalSEO = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 hero-gradient relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container mx-auto container-padding relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-2 mb-6">
-                <Globe className="w-4 h-4 text-primary" />
-                <span className="text-accent-foreground text-sm font-medium">
-                  Global SEO Services
-                </span>
-              </span>
-
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Global SEO Services{" "}
-                <span className="text-gradient">Agency</span>
-              </h1>
-
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Expand your business globally with international SEO strategies that
-                help you rank in multiple countries and reach customers worldwide.
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <Button variant="hero" size="xl" asChild>
-                  <a href="/contact">
-                    Get Global SEO Strategy
-                    <ArrowRight className="w-5 h-5" />
-                  </a>
-                </Button>
-                <Button variant="outline" size="xl" asChild>
-                  <a href="tel:+919111268785">
-                    Call: +91 9111268785
-                  </a>
-                </Button>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden lg:block"
-            >
-              <div className="bg-card rounded-2xl p-8 card-shadow">
-                <h3 className="text-xl font-bold mb-6 text-foreground">Target Markets We Serve</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {targetMarkets.map((market, index) => (
-                    <motion.div
-                      key={market.name}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
-                      className="p-4 bg-accent rounded-lg"
-                    >
-                      <p className="font-bold text-foreground">{market.name}</p>
-                      <p className="text-sm text-muted-foreground">{market.countries}</p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <ServiceHeroBanner
+        backgroundImage="/images/banners/global-seo-banner.png"
+        badge={{ icon: Globe, text: "Global SEO Services" }}
+        title={
+          <>
+            Global SEO Services{" "}
+            <span className="text-gradient">Agency</span>
+          </>
+        }
+        description="Expand your business globally with international SEO strategies that help you rank in multiple countries and reach customers worldwide."
+        primaryCTA={{ text: "Get Global SEO Strategy", href: "/contact" }}
+        secondaryCTA={{ text: "Call Now", href: "tel:+919111268785", icon: Phone }}
+      />
 
       {/* Stats Section */}
       <section className="py-12 bg-primary">

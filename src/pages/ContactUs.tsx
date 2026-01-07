@@ -12,7 +12,9 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  Youtube
+  Youtube,
+  Calendar,
+  PhoneCall
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,6 +22,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ServiceHeroBanner from "@/components/ServiceHeroBanner";
 
 const contactInfo = [
   {
@@ -46,7 +49,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: "Business Hours",
-    value: "Mon to Sat: 9AM to 6PM",
+    value: "Mon to Sat: 10 AM to 07 PM",
     description: "Sunday: Closed",
     href: "#",
   },
@@ -108,49 +111,18 @@ const ContactUs = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 hero-gradient relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container mx-auto container-padding relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <span className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-2 mb-6">
-                <MessageSquare className="w-4 h-4 text-primary" />
-                <span className="text-accent-foreground text-sm font-medium">
-                  Get In Touch
-                </span>
-              </span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-            >
-              Let's Start Your{" "}
-              <span className="text-gradient">Digital Journey</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
-            >
-              Ready to grow your business online? Connect with our digital marketing
-              experts and get a free strategy consultation today.
-            </motion.p>
-          </div>
-        </div>
-      </section>
+      <ServiceHeroBanner
+        backgroundImage="/images/main-hero/contact-us.png"
+        badge={{ icon: MessageSquare, text: "Get In Touch" }}
+        title={
+          <>
+            Let's Start Your <span className="text-gradient">Digital Journey</span>
+          </>
+        }
+        description="Ready to grow your business online? Connect with our digital marketing experts and get a free strategy consultation today."
+        primaryCTA={{ text: "Book a Meeting", href: "https://calendly.com/digiflavour243/30min" }}
+        secondaryCTA={{ text: "Call Us", href: "tel:+919111268785", icon: PhoneCall }}
+      />
 
       {/* Contact Info Cards */}
       <section className="py-12 bg-background -mt-10 relative z-20">
@@ -171,8 +143,8 @@ const ContactUs = () => {
                   <info.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
                 <h3 className="font-bold text-foreground mb-1">{info.title}</h3>
-                <p className="text-primary font-medium mb-1">{info.value}</p>
-                <p className="text-muted-foreground text-sm">{info.description}</p>
+                <p className="text-primary font-medium mb-1 whitespace-nowrap">{info.value}</p>
+                <p className="text-muted-foreground text-sm whitespace-nowrap">{info.description}</p>
               </motion.a>
             ))}
           </div>
@@ -458,6 +430,17 @@ const ContactUs = () => {
                 <a href="mailto:marketing@digitalflavour.co">
                   <Mail className="w-5 h-5" />
                   Email Us
+                </a>
+              </Button>
+              <Button
+                variant="default"
+                size="xl"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+                asChild
+              >
+                <a href="https://calendly.com/digiflavour243/30min" target="_blank" rel="noopener noreferrer">
+                  <Calendar className="w-5 h-5" />
+                  Book a Meeting
                 </a>
               </Button>
             </div>

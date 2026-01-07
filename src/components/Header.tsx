@@ -60,8 +60,8 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+        ? "bg-background/95 backdrop-blur-md shadow-lg"
+        : "bg-transparent"
         }`}
     >
       <div className="container mx-auto container-padding">
@@ -87,7 +87,10 @@ const Header = () => {
                 >
                   <a
                     href={item.href}
-                    className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
+                    className={`flex items-center gap-1 transition-colors duration-200 font-medium py-2 ${isScrolled
+                      ? "text-muted-foreground hover:text-primary"
+                      : "text-white/90 hover:text-white"
+                      }`}
                   >
                     {item.name}
                     <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -119,7 +122,10 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  className={`transition-colors duration-200 font-medium ${isScrolled
+                    ? "text-muted-foreground hover:text-primary"
+                    : "text-white/90 hover:text-white"
+                    }`}
                 >
                   {item.name}
                 </a>
@@ -134,7 +140,7 @@ const Header = () => {
               size="icon"
               onClick={toggleTheme}
               aria-label="Toggle color theme"
-              className="w-10 h-10"
+              className={`w-10 h-10 ${!isScrolled ? "border-white/30 text-white hover:bg-white/10" : ""}`}
             >
               {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </Button>
@@ -143,14 +149,17 @@ const Header = () => {
             <div className="hidden md:flex items-center gap-4">
               <a
                 href="tel:+919111268785"
-                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                className={`flex items-center gap-2 transition-colors ${isScrolled
+                  ? "text-muted-foreground hover:text-primary"
+                  : "text-white/90 hover:text-white"
+                  }`}
               >
                 <Phone className="w-4 h-4" />
                 <span className="font-medium">+91 9111268785</span>
               </a>
               <Button variant="hero" size="lg" asChild>
                 <a href="/contact">
-                  Get Started
+                  Hire Us
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </Button>
@@ -158,7 +167,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground"
+              className={`md:hidden p-2 ${isScrolled ? "text-foreground" : "text-white"}`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -214,7 +223,7 @@ const Header = () => {
               <div className="flex items-center gap-3 px-4 pt-4 border-t border-border mt-2">
                 <Button variant="hero" className="flex-1" asChild>
                   <a href="/contact">
-                    Get Started
+                    Hire Us
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </Button>

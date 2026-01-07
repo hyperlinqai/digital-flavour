@@ -7,7 +7,8 @@ import {
   ArrowUp,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  Calendar
 } from "lucide-react";
 
 const footerLinks = {
@@ -148,6 +149,17 @@ const Footer = () => {
                 >
                   <MapPin className="w-5 h-5 mt-0.5 shrink-0" />
                   <span className="text-sm">{contactInfo.address}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/digiflavour243/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 text-background/70 hover:text-primary transition-colors"
+                >
+                  <Calendar className="w-5 h-5 mt-0.5 shrink-0" />
+                  <span className="text-sm">Book a Meeting</span>
                 </a>
               </li>
             </ul>
