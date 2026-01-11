@@ -18,6 +18,11 @@ import LeadGeneration from "./pages/services/LeadGeneration";
 import EcommerceMarketing from "./pages/services/EcommerceMarketing";
 import WebDesign from "./pages/services/WebDesign";
 import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
+import CaseStudies from "./pages/CaseStudies";
+import CaseStudyDetail from "./pages/CaseStudyDetail";
+import CaseStudyTravel from "./pages/CaseStudyTravel";
+import CaseStudyHealthcare from "./pages/CaseStudyHealthcare";
+import CaseStudyReturnGifts from "./pages/CaseStudyReturnGifts";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +49,11 @@ const App = () => (
           <Route path="/services/ecommerce-marketing" element={<EcommerceMarketing />} />
           <Route path="/services/web-design" element={<WebDesign />} />
           <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/case-studies/real-estate-lead-gen" element={<CaseStudyDetail />} />
+          <Route path="/case-studies/travel-lead-gen" element={<CaseStudyTravel />} />
+          <Route path="/case-studies/healthcare-revenue" element={<CaseStudyHealthcare />} />
+          <Route path="/case-studies/return-gifts-website" element={<CaseStudyReturnGifts />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
