@@ -32,7 +32,7 @@ const contactInfo = [
     icon: Phone,
     title: "Phone",
     value: "+91 9111268785",
-    description: "Mon to Sat, 10 AM to 7 PM",
+    description: "",
     href: "tel:+919111268785",
   },
   {
