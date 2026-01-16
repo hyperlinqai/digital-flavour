@@ -1,6 +1,0 @@
-1:"$Sreact.fragment"
-2:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/694836347d1e5ef3.js"],"default"]
-3:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/694836347d1e5ef3.js"],"default"]
-4:I[22016,["/_next/static/chunks/22286ab6be654094.js"],""]
-:HL["/_next/static/chunks/36089486466c7579.css","style"]
-0:{"buildId":"kWxu25njjKNC2VIqPa_4p","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/36089486466c7579.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"inter_5972bc34-module__OU16Qa__className","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[["$","div",null,{"className":"flex flex-col items-center justify-center min-h-screen","children":[["$","h2",null,{"className":"text-4xl font-bold mb-4","children":"Not Found"}],["$","p",null,{"className":"mb-4","children":"Could not find requested resource"}],["$","$L4",null,{"href":"/","className":"text-primary hover:underline","children":"Return Home"}]]}],[]]}]}]}]]}],"loading":[["$","div","l",{"className":"flex items-center justify-center min-h-screen","children":["$","div",null,{"className":"animate-spin rounded-full h-32 w-32 border-b-2 border-primary"}]}],[],[]],"isPartial":false}
