@@ -46,7 +46,7 @@ const caseStudies = [
         title: "Boosting Organic Growth for a US E-Commerce Client",
         category: "E-Commerce SEO",
         description: "How Digital Flavour achieved 61% growth in organic traffic and top rankings for a home décor brand.",
-        image: "/images/ecommerce-concept.png",
+        image: "/images/ecommerce_packing_real.png",
         stats: "61% Growth in Organic Traffic",
         href: "/case-studies/lule-and-co-seo"
     },
@@ -55,7 +55,7 @@ const caseStudies = [
         title: "Generating 15-20 Monthly Calls for a Local Plumbing Business",
         category: "Local SEO",
         description: "How specific local strategies helped a plumbing business dominate search results in their area.",
-        image: "/images/local-seo-matter.png",
+        image: "/images/plumber_working_real.png",
         stats: "15-20 Calls/Month",
         href: "/case-studies/sea-plumbing-local-seo"
     },
