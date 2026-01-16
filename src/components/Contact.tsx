@@ -16,8 +16,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "marketing@digitalflavour.co",
-    href: "mailto:marketing@digitalflavour.co",
+    value: "digiflavour243@gmail.com",
+    href: "mailto:digiflavour243@gmail.com",
   },
   {
     icon: Clock,
