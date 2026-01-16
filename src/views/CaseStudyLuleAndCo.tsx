@@ -33,7 +33,7 @@ const CaseStudyLuleAndCo = () => {
 
             {/* Hero Section */}
             <ServiceHeroBanner
-                backgroundImage="/images/ecommerce-concept.png"
+                backgroundImage="/images/ecommerce_packing_real.png"
                 badge={{ icon: Sparkles, text: "Case Study: E-Commerce SEO" }}
                 title={
                     <>

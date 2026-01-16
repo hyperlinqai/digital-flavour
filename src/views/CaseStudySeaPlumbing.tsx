@@ -33,7 +33,7 @@ const CaseStudySeaPlumbing = () => {
 
             {/* Hero Section */}
             <ServiceHeroBanner
-                backgroundImage="/images/local-seo-matter.png"
+                backgroundImage="/images/plumber_working_real.png"
                 badge={{ icon: MapPin, text: "Case Study: Local SEO" }}
                 title={
                     <>
