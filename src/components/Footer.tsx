@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import {
   Linkedin,
@@ -10,6 +12,7 @@ import {
   MapPin,
   Calendar
 } from "lucide-react";
+import Link from "next/link";
 
 const footerLinks = {
   services: [
@@ -30,6 +33,43 @@ const footerLinks = {
     { name: "Contact", href: "/contact" },
   ],
 };
+// ... socialLinks ...
+
+// ... Footer component ...
+// Replace footerLinks mapping:
+{/* Services */ }
+<div>
+  <h3 className="font-semibold mb-6">Services</h3>
+  <ul className="space-y-3">
+    {footerLinks.services.map((link) => (
+      <li key={link.name}>
+        <Link
+          href={link.href}
+          className="text-background/70 hover:text-primary transition-colors"
+        >
+          {link.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
+
+{/* Company */ }
+<div>
+  <h3 className="font-semibold mb-6">Company</h3>
+  <ul className="space-y-3">
+    {footerLinks.company.map((link) => (
+      <li key={link.name}>
+        <Link
+          href={link.href}
+          className="text-background/70 hover:text-primary transition-colors"
+        >
+          {link.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
 const socialLinks = [
   { icon: Facebook, href: "https://www.facebook.com/people/Digi-Flavour/pfbid0G3mH8fYUft91x1ATGfWEqZNpWruvVoqsXd1eNMU37qc87DdPuYKwyVjG1iScEuFHl/", label: "Facebook" },
@@ -39,9 +79,18 @@ const socialLinks = [
 ];
 
 const contactInfo = {
-  email: "marketing@digitalflavour.co",
+  email: "digiflavour243@gmail.com",
   phone: "9111268785",
-  address: "16, Juna Pitha Main Rd, G - 2, Keshavkunj, Ahilya Pura, Indore, Madhya Pradesh 452007",
+  locations: [
+    {
+      label: "Indore, Madhya Pradesh",
+      href: "https://maps.google.com/?q=16, Juna Pitha Main Rd, G - 2, Keshavkunj, Ahilya Pura, Indore, Madhya Pradesh 452007"
+    },
+    {
+      label: "Dubai, UAE",
+      href: "https://share.google/uI9b9GlQa4InVzWP1"
+    }
+  ]
 };
 
 const Footer = () => {
@@ -140,17 +189,19 @@ const Footer = () => {
                   <span>+91 {contactInfo.phone}</span>
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://maps.google.com/?q=16, Juna Pitha Main Rd, G - 2, Keshavkunj, Ahilya Pura, Indore, Madhya Pradesh 452007"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-background/70 hover:text-primary transition-colors"
-                >
-                  <MapPin className="w-5 h-5 mt-0.5 shrink-0" />
-                  <span className="text-sm">{contactInfo.address}</span>
-                </a>
-              </li>
+              {contactInfo.locations.map((loc) => (
+                <li key={loc.label}>
+                  <a
+                    href={loc.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-3 text-background/70 hover:text-primary transition-colors"
+                  >
+                    <MapPin className="w-5 h-5 mt-0.5 shrink-0" />
+                    <span className="text-sm">{loc.label}</span>
+                  </a>
+                </li>
+              ))}
               <li>
                 <a
                   href="https://calendly.com/digiflavour243/30min"

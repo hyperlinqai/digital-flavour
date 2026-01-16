@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Phone, ArrowRight, LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ReactNode } from "react";
+import Link from "next/link";
 
 interface ServiceHeroBannerProps {
     backgroundImage: string;
@@ -87,10 +88,10 @@ const ServiceHeroBanner = ({
                         className="flex flex-wrap gap-4 justify-center"
                     >
                         <Button variant="hero" size="xl" asChild>
-                            <a href={primaryCTA.href}>
+                            <Link href={primaryCTA.href}>
                                 {primaryCTA.text}
                                 <ArrowRight className="w-5 h-5" />
-                            </a>
+                            </Link>
                         </Button>
                         {secondaryCTA && (
                             <Button

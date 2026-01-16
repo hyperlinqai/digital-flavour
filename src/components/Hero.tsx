@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star, TrendingUp, Users, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const stats = [
   { icon: Award, value: "6+", label: "Years Experience" },
@@ -55,15 +56,15 @@ const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-12">
               <Button variant="hero" size="lg" className="text-sm sm:text-base" asChild>
-                <a href="/contact">
+                <Link href="/contact">
                   Get Free Growth Strategy
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                </a>
+                </Link>
               </Button>
               <Button variant="hero-outline" size="lg" className="text-sm sm:text-base" asChild>
-                <a href="/portfolio">
+                <Link href="/portfolio">
                   View Our Work
-                </a>
+                </Link>
               </Button>
             </div>
 
