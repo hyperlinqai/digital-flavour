@@ -24,6 +24,7 @@ const services = [
     features: ["Google Business Profile", "Local Citations", "Review Management", "Local Keywords"],
     href: "/services/local-seo",
     color: "bg-orange-500/10",
+    image: "/images/services/Local SEO - 2.png",
   },
   {
     icon: Globe,
@@ -32,6 +33,7 @@ const services = [
     features: ["Multi Language SEO", "International Link Building", "Hreflang Setup", "Global Analytics"],
     href: "/services/global-seo",
     color: "bg-blue-500/10",
+    image: "/images/services/Global SEO.png",
   },
   {
     icon: Megaphone,
@@ -40,6 +42,7 @@ const services = [
     features: ["Search Ads", "Display Ads", "YouTube Ads", "Remarketing"],
     href: "/services/google-ads",
     color: "bg-green-500/10",
+    image: "/images/services/Google Ads.png",
   },
   {
     icon: Share2,
@@ -48,6 +51,7 @@ const services = [
     features: ["Facebook Ads", "Instagram Ads", "WhatsApp Ads", "Retargeting"],
     href: "/services/meta-ads",
     color: "bg-indigo-500/10",
+    image: "/images/services/Meta Ads.png",
   },
   {
     icon: LineChart,
@@ -56,6 +60,7 @@ const services = [
     features: ["Landing Pages", "Lead Magnets", "Email Campaigns", "CRM Integration"],
     href: "/services/lead-generation",
     color: "bg-purple-500/10",
+    image: "/images/services/Lead Generation.png",
   },
   {
     icon: ShoppingCart,
@@ -64,6 +69,7 @@ const services = [
     features: ["Product Listings", "Shopping Ads", "Conversion Optimization", "Cart Recovery"],
     href: "/services/ecommerce-marketing",
     color: "bg-pink-500/10",
+    image: "/images/services/Ecommerce Marketing.png",
   },
   {
     icon: Target,
@@ -72,6 +78,7 @@ const services = [
     features: ["Responsive Design", "UI/UX Optimization", "Speed Optimization", "SEO Friendly"],
     href: "/services/web-design",
     color: "bg-cyan-500/10",
+    image: "/images/services/Web Design .png",
   },
   {
     icon: Zap,
@@ -80,6 +87,7 @@ const services = [
     features: ["Content Strategy", "Community Management", "Influencer Marketing", "Analytics"],
     href: "/services/social-media-marketing",
     color: "bg-amber-500/10",
+    image: "/images/services/Social Media.png",
   },
 ];
 
@@ -167,9 +175,17 @@ const Services = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group bg-card rounded-2xl p-8 card-shadow hover:card-shadow-hover transition-all duration-300 hover:-translate-y-1 block"
               >
-                <Link href={service.href} className="block h-full">
-                  <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                    <service.icon className="w-8 h-8 text-primary" />
+                <Link href={service.href} className="block h-full cursor-pointer">
+                  <div className="w-full h-48 mb-6 overflow-hidden rounded-xl relative">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+                    <div className={`absolute top-4 right-4 w-10 h-10 rounded-lg ${service.color} bg-white/90 backdrop-blur-sm flex items-center justify-center`}>
+                      <service.icon className="w-5 h-5 text-primary" />
+                    </div>
                   </div>
 
                   <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">

@@ -126,7 +126,7 @@ const GlobalSEO = () => {
 
       {/* Hero Section */}
       <ServiceHeroBanner
-        backgroundImage="/images/banners/global-seo-banner.png"
+        backgroundImage="/images/services/Global SEO.png"
         badge={{ icon: Globe, text: "Global SEO Services" }}
         title={
           <>
@@ -217,7 +217,7 @@ const GlobalSEO = () => {
               <div className="relative rounded-2xl overflow-hidden card-shadow">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10" />
                 <img
-                  src="/images/global-seo-concept.png"
+                  src="/images/services/Global SEO.png"
                   alt="Global SEO Visualization"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />

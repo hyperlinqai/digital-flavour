@@ -67,7 +67,7 @@ const LocalSEO = () => {
 
       {/* Hero Section */}
       <ServiceHeroBanner
-        backgroundImage="/images/banners/local-seo-banner.png"
+        backgroundImage="/images/services/Local SEO - 2.png"
         badge={{ icon: MapPin, text: "Local SEO Services" }}
         title={
           <>
@@ -158,7 +158,7 @@ const LocalSEO = () => {
               <div className="relative rounded-2xl overflow-hidden card-shadow">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10" />
                 <img
-                  src="/images/local-seo-matter.png"
+                  src="/images/services/Local SEO - 2.png"
                   alt="Local SEO Visualization"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />

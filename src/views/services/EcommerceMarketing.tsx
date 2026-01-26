@@ -65,7 +65,7 @@ const EcommerceMarketing = () => {
 
       {/* Hero Section */}
       <ServiceHeroBanner
-        backgroundImage="/images/banners/ecommerce-banner.png"
+        backgroundImage="/images/services/Ecommerce Marketing.png"
         badge={{ icon: Store, text: "Ecommerce Marketing Agency" }}
         title={
           <>
@@ -155,7 +155,7 @@ const EcommerceMarketing = () => {
               <div className="relative rounded-2xl overflow-hidden card-shadow">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10" />
                 <img
-                  src="/images/ecommerce-concept.png"
+                  src="/images/services/Ecommerce Marketing.png"
                   alt="Ecommerce Visualization"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />

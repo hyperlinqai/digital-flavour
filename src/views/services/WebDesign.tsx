@@ -65,7 +65,7 @@ const WebDesign = () => {
 
       {/* Hero Section */}
       <ServiceHeroBanner
-        backgroundImage="/images/banners/web-design-banner.png"
+        backgroundImage="/images/services/Web Design .png"
         badge={{ icon: Code, text: "Web Design Company" }}
         title={
           <>
@@ -155,7 +155,7 @@ const WebDesign = () => {
               <div className="relative rounded-2xl overflow-hidden card-shadow">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10" />
                 <img
-                  src="/images/web-design-concept.png"
+                  src="/images/services/Web Design .png"
                   alt="Web Design Visualization"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />

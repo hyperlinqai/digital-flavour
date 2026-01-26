@@ -126,7 +126,7 @@ const MetaAds = () => {
 
       {/* Hero Section */}
       <ServiceHeroBanner
-        backgroundImage="/images/banners/meta-ads-banner.png"
+        backgroundImage="/images/services/Meta Ads.png"
         badge={{ icon: Share2, text: "Meta Ads Services" }}
         title={
           <>
@@ -216,7 +216,7 @@ const MetaAds = () => {
               <div className="relative rounded-2xl overflow-hidden card-shadow">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10" />
                 <img
-                  src="/images/meta-ads-concept.png"
+                  src="/images/services/Meta Ads.png"
                   alt="Meta Ads Visualization"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />

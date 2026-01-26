@@ -65,7 +65,7 @@ const SocialMediaMarketing = () => {
 
       {/* Hero Section */}
       <ServiceHeroBanner
-        backgroundImage="/images/banners/social-media-banner.png"
+        backgroundImage="/images/services/Social Media.png"
         badge={{ icon: Share2, text: "Social Media Marketing Agency" }}
         title={
           <>
@@ -155,7 +155,7 @@ const SocialMediaMarketing = () => {
               <div className="relative rounded-2xl overflow-hidden card-shadow">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10" />
                 <img
-                  src="/images/social-media-concept.png"
+                  src="/images/services/Social Media.png"
                   alt="Social Media Visualization"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />

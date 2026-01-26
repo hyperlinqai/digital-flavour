@@ -66,7 +66,7 @@ const LeadGeneration = () => {
 
       {/* Hero Section */}
       <ServiceHeroBanner
-        backgroundImage="/images/banners/lead-generation-banner.png"
+        backgroundImage="/images/services/Lead Generation.png"
         badge={{ icon: LineChart, text: "Lead Generation Services" }}
         title={
           <>
@@ -155,7 +155,7 @@ const LeadGeneration = () => {
               <div className="relative rounded-2xl overflow-hidden card-shadow">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10" />
                 <img
-                  src="/images/lead-gen-concept.png"
+                  src="/images/services/Lead Generation.png"
                   alt="Lead Generation Visualization"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
