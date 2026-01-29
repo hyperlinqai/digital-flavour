@@ -214,3 +214,384 @@
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
+
+/* ============================================
+   BLOG CONTENT STYLES
+   Global stylesheet for WordPress blog content
+   ============================================ */
+
+.blog-content {
+  @apply text-foreground leading-relaxed;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+/* Headings */
+.blog-content h1 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-12 mb-6;
+  line-height: 1.2;
+}
+
+.blog-content h2 {
+  @apply text-2xl md:text-3xl font-bold text-foreground mt-12 mb-6 pb-3 border-b border-border;
+  line-height: 1.3;
+  scroll-margin-top: 6rem;
+}
+
+.blog-content h3 {
+  @apply text-xl md:text-2xl font-bold text-foreground mt-10 mb-4;
+  line-height: 1.4;
+  scroll-margin-top: 6rem;
+}
+
+.blog-content h4 {
+  @apply text-lg md:text-xl font-semibold text-foreground mt-8 mb-3;
+  line-height: 1.4;
+  scroll-margin-top: 6rem;
+}
+
+.blog-content h5 {
+  @apply text-base md:text-lg font-semibold text-foreground mt-6 mb-2;
+  line-height: 1.5;
+  scroll-margin-top: 6rem;
+}
+
+.blog-content h6 {
+  @apply text-sm md:text-base font-semibold text-muted-foreground mt-6 mb-2 uppercase tracking-wider;
+  line-height: 1.5;
+  scroll-margin-top: 6rem;
+}
+
+/* Paragraphs */
+.blog-content p {
+  @apply mb-6 text-foreground/85;
+  line-height: 1.8;
+}
+
+.blog-content p:last-child {
+  @apply mb-0;
+}
+
+/* Links */
+.blog-content a {
+  @apply text-primary font-medium no-underline hover:underline transition-colors;
+}
+
+.blog-content a:hover {
+  @apply text-primary/80;
+}
+
+/* Strong and Emphasis */
+.blog-content strong,
+.blog-content b {
+  @apply font-semibold text-foreground;
+}
+
+.blog-content em,
+.blog-content i {
+  @apply italic;
+}
+
+/* Lists */
+.blog-content ul {
+  @apply my-6 pl-6 space-y-3;
+  list-style-type: disc;
+}
+
+.blog-content ol {
+  @apply my-6 pl-6 space-y-3;
+  list-style-type: decimal;
+}
+
+.blog-content li {
+  @apply text-foreground/85 leading-relaxed;
+  padding-left: 0.5rem;
+}
+
+.blog-content li::marker {
+  @apply text-primary;
+}
+
+.blog-content ul ul,
+.blog-content ol ul {
+  @apply mt-3 mb-0;
+  list-style-type: circle;
+}
+
+.blog-content ol ol,
+.blog-content ul ol {
+  @apply mt-3 mb-0;
+  list-style-type: lower-alpha;
+}
+
+/* Nested lists */
+.blog-content li > ul,
+.blog-content li > ol {
+  @apply ml-4;
+}
+
+/* Blockquotes */
+.blog-content blockquote {
+  @apply my-8 py-4 px-6 border-l-4 border-primary bg-primary/5 rounded-r-xl italic;
+}
+
+.blog-content blockquote p {
+  @apply text-foreground/90 mb-0;
+}
+
+.blog-content blockquote cite {
+  @apply block mt-4 text-sm text-muted-foreground not-italic font-medium;
+}
+
+/* Images */
+.blog-content img {
+  @apply rounded-xl shadow-lg my-8 w-full h-auto;
+  max-width: 100%;
+}
+
+.blog-content figure {
+  @apply my-8;
+}
+
+.blog-content figure img {
+  @apply my-0;
+}
+
+.blog-content figcaption {
+  @apply text-center text-sm text-muted-foreground mt-3 italic;
+}
+
+/* Code - Inline */
+.blog-content code {
+  @apply bg-muted px-2 py-1 rounded-md text-sm font-mono text-primary;
+}
+
+/* Code - Blocks */
+.blog-content pre {
+  @apply my-8 p-6 bg-muted border border-border rounded-xl overflow-x-auto;
+}
+
+.blog-content pre code {
+  @apply bg-transparent p-0 text-sm text-foreground;
+  font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+}
+
+/* Tables */
+.blog-content table {
+  @apply w-full my-8 border-collapse;
+}
+
+.blog-content thead {
+  @apply bg-muted;
+}
+
+.blog-content th {
+  @apply px-4 py-3 text-left font-semibold text-foreground border border-border;
+}
+
+.blog-content td {
+  @apply px-4 py-3 text-foreground/85 border border-border;
+}
+
+.blog-content tbody tr:nth-child(even) {
+  @apply bg-muted/50;
+}
+
+.blog-content tbody tr:hover {
+  @apply bg-muted/80;
+}
+
+/* Horizontal Rule */
+.blog-content hr {
+  @apply my-12 border-t border-border;
+}
+
+/* Videos and Embeds */
+.blog-content iframe,
+.blog-content video {
+  @apply w-full my-8 rounded-xl shadow-lg;
+  aspect-ratio: 16 / 9;
+}
+
+.blog-content .wp-block-embed,
+.blog-content .wp-block-video {
+  @apply my-8;
+}
+
+/* WordPress Specific Blocks */
+.blog-content .wp-block-image {
+  @apply my-8;
+}
+
+.blog-content .wp-block-image img {
+  @apply my-0;
+}
+
+.blog-content .wp-block-image figcaption {
+  @apply text-center text-sm text-muted-foreground mt-3;
+}
+
+.blog-content .wp-block-gallery {
+  @apply grid grid-cols-2 md:grid-cols-3 gap-4 my-8;
+}
+
+.blog-content .wp-block-gallery img {
+  @apply my-0 aspect-square object-cover;
+}
+
+.blog-content .wp-block-quote {
+  @apply my-8 py-4 px-6 border-l-4 border-primary bg-primary/5 rounded-r-xl;
+}
+
+.blog-content .wp-block-pullquote {
+  @apply my-12 py-8 px-8 border-y-4 border-primary text-center;
+}
+
+.blog-content .wp-block-pullquote blockquote {
+  @apply border-0 bg-transparent p-0;
+}
+
+.blog-content .wp-block-pullquote p {
+  @apply text-xl md:text-2xl font-medium text-foreground;
+}
+
+.blog-content .wp-block-separator {
+  @apply my-12 border-t-2 border-border;
+}
+
+.blog-content .wp-block-separator.is-style-dots {
+  @apply border-0 text-center;
+}
+
+.blog-content .wp-block-separator.is-style-dots::before {
+  content: '···';
+  @apply text-2xl text-muted-foreground tracking-[1em];
+}
+
+/* Callouts / Notes */
+.blog-content .wp-block-note,
+.blog-content .callout,
+.blog-content .note {
+  @apply my-8 p-6 bg-secondary/10 border border-secondary/20 rounded-xl;
+}
+
+.blog-content .wp-block-warning,
+.blog-content .warning {
+  @apply my-8 p-6 bg-destructive/10 border border-destructive/20 rounded-xl;
+}
+
+/* Button styles in content */
+.blog-content .wp-block-button a,
+.blog-content a.button {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors no-underline;
+}
+
+/* Definition Lists */
+.blog-content dl {
+  @apply my-6;
+}
+
+.blog-content dt {
+  @apply font-semibold text-foreground mt-4;
+}
+
+.blog-content dd {
+  @apply ml-6 text-foreground/85;
+}
+
+/* Abbreviations */
+.blog-content abbr {
+  @apply cursor-help border-b border-dotted border-muted-foreground;
+}
+
+/* Superscript and Subscript */
+.blog-content sup {
+  @apply text-xs align-super;
+}
+
+.blog-content sub {
+  @apply text-xs align-sub;
+}
+
+/* Mark / Highlight */
+.blog-content mark {
+  @apply bg-primary/20 text-foreground px-1 rounded;
+}
+
+/* Keyboard Input */
+.blog-content kbd {
+  @apply px-2 py-1 bg-muted border border-border rounded text-sm font-mono;
+}
+
+/* Small Text */
+.blog-content small {
+  @apply text-sm text-muted-foreground;
+}
+
+/* Address */
+.blog-content address {
+  @apply my-6 not-italic text-muted-foreground;
+}
+
+/* First paragraph drop cap (optional) */
+.blog-content.with-dropcap > p:first-of-type::first-letter {
+  @apply float-left text-6xl font-bold text-primary mr-3 mt-1;
+  line-height: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .blog-content {
+    font-size: 1rem;
+  }
+
+  .blog-content h1 {
+    @apply text-2xl;
+  }
+
+  .blog-content h2 {
+    @apply text-xl;
+  }
+
+  .blog-content h3 {
+    @apply text-lg;
+  }
+
+  .blog-content pre {
+    @apply p-4 text-xs;
+  }
+
+  .blog-content table {
+    @apply text-sm;
+  }
+
+  .blog-content th,
+  .blog-content td {
+    @apply px-2 py-2;
+  }
+}
+
+/* Dark mode specific adjustments */
+.dark .blog-content img {
+  @apply opacity-95;
+}
+
+.dark .blog-content pre {
+  @apply bg-card border-border;
+}
+
+.dark .blog-content code {
+  @apply bg-card;
+}
+
+.dark .blog-content blockquote {
+  @apply bg-primary/10;
+}
+
+.dark .blog-content tbody tr:nth-child(even) {
+  @apply bg-card/50;
+}
+
+.dark .blog-content tbody tr:hover {
+  @apply bg-card/80;
+}
