@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
   Phone,
@@ -90,6 +91,7 @@ const reasons = [
 
 const ContactUs = () => {
   const { toast } = useToast();
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -104,16 +106,30 @@ const ContactUs = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    toast({
-      title: "Message Sent Successfully!",
-      description: "Our team will get back to you within 24 hours.",
-    });
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
 
-    setFormData({ name: "", email: "", phone: "", company: "", service: "", message: "" });
-    setIsSubmitting(false);
+      setFormData({ name: "", email: "", phone: "", company: "", service: "", message: "" });
+      router.push('/thank-you');
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

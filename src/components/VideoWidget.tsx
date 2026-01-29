@@ -9,7 +9,7 @@ interface VideoWidgetProps {
     avatarUrl?: string; // Optional custom avatar
 }
 
-const VideoWidget = ({ videoUrl, avatarUrl = "/images/avatar-placeholder.png" }: VideoWidgetProps) => {
+const VideoWidget = ({ videoUrl, avatarUrl = "/df-logo.png" }: VideoWidgetProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     // Helper to determine embed URL
