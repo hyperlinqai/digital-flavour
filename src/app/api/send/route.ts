@@ -87,7 +87,7 @@ export async function POST(request: Request) {
         // Send email to admin
         const adminEmail = await resend.emails.send({
             from: 'Digital Flavour <marketing@digitalflavour.co>',
-            to: ['dfsales03@gmail.com'],
+            to: ['dfsales03@gmail.com', 'digiflavour243@gmail.com'],
             subject: `New Inquiry from ${name}`,
             html: adminEmailHtml,
             replyTo: email,
